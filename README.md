@@ -19,3 +19,5 @@ Reference:
 [7]. [Compact UI Topbar](https://steamcommunity.com/sharedfiles/filedetails/?id=2941839343)
 
 [8]. [ChatGPT](https://chat.openai.com/chat)
+
+[9]. [Stellaris Wiki](https://stellaris.paradoxwikis.com/Interface_modding)
