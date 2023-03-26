@@ -1,0 +1,58 @@
+spriteTypes = {
+	corneredTileSpriteType = {
+		name = "GFX_ui_topbar_bar"
+		texturefile = "gfx/interface/tiles/ui_topbar_bar.dds"
+		borderSize = { x = 14 y = 14 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_ui_navbar_bg"
+		texturefile = "gfx/interface/main/ui_navbar_bg.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_topbar_running_44"
+		texturefile = "gfx/interface/topbar/running_bg_44.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/topbar/paused_mask_44.dds"
+			animationtexturefile = "gfx/interface/topbar/running_texture_44.dds"
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 20.0
+			animationdelay = 0.0
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+	corneredTileSpriteType = {
+		name = "GFX_ui_topbar_background"
+		texturefile = "gfx/ui_overhaul_qhd/topbar/topbar_background.dds"
+		borderSize = { x = 0 y = 0 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_ui_topbar_background_hexagon"
+		texturefile = "gfx/ui_overhaul_qhd/topbar/topbar_background_hexagon.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_topbar_paused_44"
+		texturefile = "gfx/interface/topbar/paused_bg_44.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/topbar/paused_mask_44.dds"
+			animationtexturefile = "gfx/interface/topbar/paused_texture_44.dds"
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 20000.0
+			animationdelay = 0.0
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+}

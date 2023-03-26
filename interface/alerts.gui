@@ -1,0 +1,72 @@
+guiTypes = {
+	positionType = {
+		name = "alerticon_startposition"
+		position = { x = 50 y = 40 }
+	}
+	positionType = {
+		name = "alerticon_offset"
+		position = { x = 55 y = 64 }
+	}
+	positionType = {
+		name = "alerticon_per_row"
+		position = { x = 7 y = 0 }
+	}
+	
+	containerWindowType = {
+		name = "alerticon_window"
+		position = { x = 0 y = 0 }
+		size = { width = 64 height = 64 }
+
+		buttonType = {
+			name = "alerticon_banner"
+			spriteType = "GFX_alerticon_banner_med"
+			position = { x= 0 y = 1 }
+			Orientation = "UPPER_RIGHT"
+			oversound = no_sound
+		}
+		
+		iconType = {
+			name = "alerticon"
+			spriteType = "GFX_alerticons"
+			position = { x= 11 y = 30 }
+			Orientation = "UPPER_RIGHT"
+		}	
+	}
+	
+	containerWindowType = {
+		name = "message_window"
+		position = { x = 0 y = 0 }
+		size = { width = 64 height = 64 }
+
+		buttonType = {
+			name = "message_icon_button"
+			quadTextureSprite = "GFX_test_message_icon"
+			position = { x = -2 y = 22  }
+			clicksound = "confirmation"
+			oversound = no_sound
+		}
+
+		iconType = {
+			name = "message_frame"
+			spriteType = "GFX_message_frame"
+			position = { x = -18 y = -1 }
+			alwaysTransparent = yes
+			frame = 1
+		}
+
+		iconType = {
+			name = "message_circle"
+			spriteType = "GFX_message_circle"
+			position = { x = -3 y = 21 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "message_response"
+			position = { x = 6 y = 49 }
+			spriteType = "GFX_alliance_vote_status"
+			scale = 0.7
+		}
+	}
+}
+

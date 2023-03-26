@@ -1,0 +1,1175 @@
+# Energy
+tb_energy_group = {
+	resources = { energy }
+	localization = {
+		"RESOURCE_GROUP_DEFAULT_NUL" = default
+		
+		# Decimal values - 2 digits
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_NEG_RSV"  = { stored >= 1010000 stored < 10000000   balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_NEG_RSV"  = { stored >= 1010000 stored < 10000000   balance > -1     balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_INT_NEG_RSV"  = { stored >= 1010000 stored < 10000000   balance > -10000 balance < 0 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_INT_NEG"      = { stored >= 1010000 stored < 10000000   balance < 0 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_NEG"  = { stored >= 1010000 stored < 10000000   balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_NEG"  = { stored >= 1010000 stored < 10000000   balance > -1   balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_INT_NEG"  = { stored >= 1010000 stored < 10000000   balance < 0 }
+		
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_MAX"  = { stored >= max   max >= 1010000 max < 10000000   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_MAX"  = { stored >= max   max >= 1010000 max < 10000000   balance >= 0.1  balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_INT_MAX"  = { stored >= max   max >= 1010000 max < 10000000 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC" = { stored >= 1010000 stored < 10000000   balance >= 1000  balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC" = { stored >= 1010000 stored < 10000000   balance >= 0.1   balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_INT" = { stored >= 1010000 stored < 10000000   balance > 0 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_NUL" = { stored >= 1010000 stored < 10000000   balance = 0 }
+		
+		# Negative balance with reserves
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG_RSV"  = { stored >= 50000   balance > -2000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_INT_NEG_RSV"  = { stored >= 25000   balance > -1000 balance <= -500 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_INT_NEG_RSV"  = { stored >= 15000   balance > -500  balance <= -200 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG_RSV"  = { stored >= 10000   balance > -1    balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2_NEG_RSV" = { stored >= 10000   balance > -0.1  balance < 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_INT_NEG_RSV"  = { stored >= 10000   balance > -200  balance < 0 }
+		
+		# Negative balance
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"   = { stored >= 1100000 stored < 100000000   balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"   = { stored >= 1100000 stored < 100000000   balance > -1   balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2_NEG"  = { stored >= 1100000 stored < 100000000   balance > -0.1   balance < 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_NEG"   = { stored >= 1100000 stored < 100000000   balance < 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"   = { stored >= 1000    stored < 10000   balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"   = { stored >= 1000    stored < 10000   balance > -1   balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2_NEG"  = { stored >= 1000    stored < 10000   balance > -0.1   balance < 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_NEG"   = { stored >= 1000    stored < 10000   balance < 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG"   = { balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG"   = { balance > -1   balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2_NEG"  = { balance > -0.1   balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_NEG"                  = { balance < 0 }
+		
+		# Max capacity
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_MAX"  = { stored >= max   max >= 1100000 max < 100000000   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_MAX"  = { stored >= max   max >= 1100000 max < 100000000   balance >= 0.1  balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_MAX" = { stored >= max   max >= 1100000 max < 100000000   balance > 0   balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_MAX"  = { stored >= max   max >= 1100000 max < 100000000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_MAX"  = { stored >= max   max >= 1000    max < 10000   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_MAX"  = { stored >= max   max >= 1000    max < 10000   balance >= 0.1  balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2_MAX" = { stored >= max   max >= 1000    max < 10000   balance > 0   balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_MAX"  = { stored >= max   max >= 1000    max < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_MAX"  = { stored >= max   max > 0   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_MAX"  = { stored >= max   max > 0   balance >= 0.1  balance < 1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2_MAX" = { stored >= max   max > 0   balance > 0   balance < 0.1 }
+		"RESOURCE_GROUP_DEFAULT_MAX"                 = { stored >= max   max > 0 }
+		
+		# Decimal values
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"   = { stored >= 1000000  stored < 100000000   balance >= 1000  balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"   = { stored >= 1000000  stored < 100000000   balance >= 0.1   balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2"  = { stored >= 1000000  stored < 100000000   balance > 0    balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT"   = { stored >= 1000000  stored < 100000000   balance > 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"   = { stored >= 1000   stored < 10000   balance >= 1000  balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"   = { stored >= 1000   stored < 10000   balance >= 0.1   balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2"  = { stored >= 1000   stored < 10000   balance > 0    balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT"   = { stored >= 1000   stored < 10000   balance > 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"   = { stored >= 0.1  stored < 1    balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"   = { stored >= 0.1  stored < 1    balance >= 0.1 balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2"  = { stored >= 0.1  stored < 1    balance > 0  balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT"   = { stored >= 0.1  stored < 1    balance > 0 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC"  = { stored > 0   stored < 0.1    balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC"  = { stored > 0   stored < 0.1    balance >= 0.1 balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC2" = { stored > 0   stored < 0.1    balance > 0  balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_INT"  = { stored > 0   stored < 0.1    balance > 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC"   = { stored > 0   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC"   = { stored > 0   balance >= 0.1  balance < 1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2"  = { stored > 0   balance > 0   balance < 0.1 }
+		"RESOURCE_GROUP_DEFAULT"                  = { stored > 0   balance > 0 }
+		
+		# Null values
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_NUL"  = { stored >= 1000000 stored < 100000000   balance = 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_NUL"  = { stored >= 1000    stored < 10000   balance = 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_NUL"  = { stored > 0   balance = 0 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_DEC"  = { stored = 0   balance > 0.1   balance < 1 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_DEC2" = { stored = 0   balance > 0   balance < 0.1 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_INT"  = { stored = 0   balance > 0 }
+		"RESOURCE_GROUP_DEFAULT_NUL"             = { stored = 0   balance = 0 }
+	}
+	onclick = market
+}
+
+# Minerals
+tb_mineral_group = {
+	resources = { minerals }
+	localization = {
+		"RESOURCE_GROUP_DEFAULT_NUL" = default
+		
+		# Decimal values - 2 digits
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_NEG_RSV"  = { stored >= 1010000 stored < 10000000   balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_NEG_RSV"  = { stored >= 1010000 stored < 10000000   balance > -1     balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_INT_NEG_RSV"  = { stored >= 1010000 stored < 10000000   balance > -10000 balance < 0 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_INT_NEG"      = { stored >= 1010000 stored < 10000000   balance < 0 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_NEG"  = { stored >= 1010000 stored < 10000000   balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_NEG"  = { stored >= 1010000 stored < 10000000   balance > -1   balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_INT_NEG"  = { stored >= 1010000 stored < 10000000   balance < 0 }
+		
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_MAX"  = { stored >= max   max >= 1010000 max < 10000000   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_MAX"  = { stored >= max   max >= 1010000 max < 10000000   balance >= 0.1  balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_INT_MAX"  = { stored >= max   max >= 1010000 max < 10000000 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC" = { stored >= 1010000 stored < 10000000   balance >= 1000  balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC" = { stored >= 1010000 stored < 10000000   balance >= 0.1   balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_INT" = { stored >= 1010000 stored < 10000000   balance > 0 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_NUL" = { stored >= 1010000 stored < 10000000   balance = 0 }
+		
+		# Negative balance with reserves
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG_RSV"  = { stored >= 50000   balance > -2000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_INT_NEG_RSV"  = { stored >= 25000   balance > -1000 balance <= -500 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_INT_NEG_RSV"  = { stored >= 15000   balance > -500  balance <= -200 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG_RSV"  = { stored >= 10000   balance > -1    balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2_NEG_RSV" = { stored >= 10000   balance > -0.1  balance < 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_INT_NEG_RSV"  = { stored >= 10000   balance > -200  balance < 0 }
+		
+		# Negative balance
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"   = { stored >= 1100000 stored < 100000000   balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"   = { stored >= 1100000 stored < 100000000   balance > -1   balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2_NEG"  = { stored >= 1100000 stored < 100000000   balance > -0.1   balance < 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_NEG"   = { stored >= 1100000 stored < 100000000   balance < 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"   = { stored >= 1000    stored < 10000   balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"   = { stored >= 1000    stored < 10000   balance > -1   balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2_NEG"  = { stored >= 1000    stored < 10000   balance > -0.1   balance < 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_NEG"   = { stored >= 1000    stored < 10000   balance < 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG"   = { balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG"   = { balance > -1   balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2_NEG"  = { balance > -0.1   balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_NEG"                  = { balance < 0 }
+		
+		# Max capacity
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_MAX"  = { stored >= max   max >= 1100000 max < 100000000   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_MAX"  = { stored >= max   max >= 1100000 max < 100000000   balance >= 0.1  balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_MAX" = { stored >= max   max >= 1100000 max < 100000000   balance > 0   balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_MAX"  = { stored >= max   max >= 1100000 max < 100000000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_MAX"  = { stored >= max   max >= 1000    max < 10000   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_MAX"  = { stored >= max   max >= 1000    max < 10000   balance >= 0.1  balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2_MAX" = { stored >= max   max >= 1000    max < 10000   balance > 0   balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_MAX"  = { stored >= max   max >= 1000    max < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_MAX"  = { stored >= max   max > 0   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_MAX"  = { stored >= max   max > 0   balance >= 0.1  balance < 1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2_MAX" = { stored >= max   max > 0   balance > 0   balance < 0.1 }
+		"RESOURCE_GROUP_DEFAULT_MAX"                 = { stored >= max   max > 0 }
+		
+		# Decimal values
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"   = { stored >= 1000000  stored < 100000000   balance >= 1000  balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"   = { stored >= 1000000  stored < 100000000   balance >= 0.1   balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2"  = { stored >= 1000000  stored < 100000000   balance > 0    balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT"   = { stored >= 1000000  stored < 100000000   balance > 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"   = { stored >= 1000   stored < 10000   balance >= 1000  balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"   = { stored >= 1000   stored < 10000   balance >= 0.1   balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2"  = { stored >= 1000   stored < 10000   balance > 0    balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT"   = { stored >= 1000   stored < 10000   balance > 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"   = { stored >= 0.1  stored < 1    balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"   = { stored >= 0.1  stored < 1    balance >= 0.1 balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2"  = { stored >= 0.1  stored < 1    balance > 0  balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT"   = { stored >= 0.1  stored < 1    balance > 0 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC"  = { stored > 0   stored < 0.1    balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC"  = { stored > 0   stored < 0.1    balance >= 0.1 balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC2" = { stored > 0   stored < 0.1    balance > 0  balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_INT"  = { stored > 0   stored < 0.1    balance > 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC"   = { stored > 0   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC"   = { stored > 0   balance >= 0.1  balance < 1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2"  = { stored > 0   balance > 0   balance < 0.1 }
+		"RESOURCE_GROUP_DEFAULT"                  = { stored > 0   balance > 0 }
+		
+		# Null values
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_NUL"  = { stored >= 1000000 stored < 100000000   balance = 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_NUL"  = { stored >= 1000    stored < 10000   balance = 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_NUL"  = { stored > 0   balance = 0 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_DEC"  = { stored = 0   balance > 0.1   balance < 1 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_DEC2" = { stored = 0   balance > 0   balance < 0.1 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_INT"  = { stored = 0   balance > 0 }
+		"RESOURCE_GROUP_DEFAULT_NUL"             = { stored = 0   balance = 0 }
+	}
+	onclick = market
+}
+
+# Food
+tb_food_group = {
+	resources = { food }
+	localization = {
+		"RESOURCE_GROUP_DEFAULT_NUL" = default
+		
+		# Decimal values - 2 digits
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_NEG_RSV"  = { stored >= 1010000 stored < 10000000   balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_NEG_RSV"  = { stored >= 1010000 stored < 10000000   balance > -1     balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_INT_NEG_RSV"  = { stored >= 1010000 stored < 10000000   balance > -10000 balance < 0 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_INT_NEG"      = { stored >= 1010000 stored < 10000000   balance < 0 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_NEG"  = { stored >= 1010000 stored < 10000000   balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_NEG"  = { stored >= 1010000 stored < 10000000   balance > -1   balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_INT_NEG"  = { stored >= 1010000 stored < 10000000   balance < 0 }
+		
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_MAX"  = { stored >= max   max >= 1010000 max < 10000000   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_MAX"  = { stored >= max   max >= 1010000 max < 10000000   balance >= 0.1  balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_INT_MAX"  = { stored >= max   max >= 1010000 max < 10000000 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC" = { stored >= 1010000 stored < 10000000   balance >= 1000  balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC" = { stored >= 1010000 stored < 10000000   balance >= 0.1   balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_INT" = { stored >= 1010000 stored < 10000000   balance > 0 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_NUL" = { stored >= 1010000 stored < 10000000   balance = 0 }
+		
+		# Negative balance with reserves
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG_RSV"  = { stored >= 50000   balance > -2000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_INT_NEG_RSV"  = { stored >= 25000   balance > -1000 balance <= -500 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_INT_NEG_RSV"  = { stored >= 15000   balance > -500  balance <= -200 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG_RSV"  = { stored >= 10000   balance > -1    balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2_NEG_RSV" = { stored >= 10000   balance > -0.1  balance < 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_INT_NEG_RSV"  = { stored >= 10000   balance > -200  balance < 0 }
+		
+		# Negative balance
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"   = { stored >= 1100000 stored < 100000000   balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"   = { stored >= 1100000 stored < 100000000   balance > -1   balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2_NEG"  = { stored >= 1100000 stored < 100000000   balance > -0.1   balance < 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_NEG"   = { stored >= 1100000 stored < 100000000   balance < 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"   = { stored >= 1000    stored < 10000   balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"   = { stored >= 1000    stored < 10000   balance > -1   balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2_NEG"  = { stored >= 1000    stored < 10000   balance > -0.1   balance < 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_NEG"   = { stored >= 1000    stored < 10000   balance < 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG"   = { balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG"   = { balance > -1   balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2_NEG"  = { balance > -0.1   balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_NEG"                  = { balance < 0 }
+		
+		# Max capacity
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_MAX"  = { stored >= max   max >= 1100000 max < 100000000   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_MAX"  = { stored >= max   max >= 1100000 max < 100000000   balance >= 0.1  balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_MAX" = { stored >= max   max >= 1100000 max < 100000000   balance > 0   balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_MAX"  = { stored >= max   max >= 1100000 max < 100000000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_MAX"  = { stored >= max   max >= 1000    max < 10000   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_MAX"  = { stored >= max   max >= 1000    max < 10000   balance >= 0.1  balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2_MAX" = { stored >= max   max >= 1000    max < 10000   balance > 0   balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_MAX"  = { stored >= max   max >= 1000    max < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_MAX"  = { stored >= max   max > 0   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_MAX"  = { stored >= max   max > 0   balance >= 0.1  balance < 1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2_MAX" = { stored >= max   max > 0   balance > 0   balance < 0.1 }
+		"RESOURCE_GROUP_DEFAULT_MAX"                 = { stored >= max   max > 0 }
+		
+		# Decimal values
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"   = { stored >= 1000000  stored < 100000000   balance >= 1000  balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"   = { stored >= 1000000  stored < 100000000   balance >= 0.1   balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2"  = { stored >= 1000000  stored < 100000000   balance > 0    balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT"   = { stored >= 1000000  stored < 100000000   balance > 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"   = { stored >= 1000   stored < 10000   balance >= 1000  balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"   = { stored >= 1000   stored < 10000   balance >= 0.1   balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2"  = { stored >= 1000   stored < 10000   balance > 0    balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT"   = { stored >= 1000   stored < 10000   balance > 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"   = { stored >= 0.1  stored < 1    balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"   = { stored >= 0.1  stored < 1    balance >= 0.1 balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2"  = { stored >= 0.1  stored < 1    balance > 0  balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT"   = { stored >= 0.1  stored < 1    balance > 0 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC"  = { stored > 0   stored < 0.1    balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC"  = { stored > 0   stored < 0.1    balance >= 0.1 balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC2" = { stored > 0   stored < 0.1    balance > 0  balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_INT"  = { stored > 0   stored < 0.1    balance > 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC"   = { stored > 0   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC"   = { stored > 0   balance >= 0.1  balance < 1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2"  = { stored > 0   balance > 0   balance < 0.1 }
+		"RESOURCE_GROUP_DEFAULT"                  = { stored > 0   balance > 0 }
+		
+		# Null values
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_NUL"  = { stored >= 1000000 stored < 100000000   balance = 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_NUL"  = { stored >= 1000    stored < 10000   balance = 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_NUL"  = { stored > 0   balance = 0 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_DEC"  = { stored = 0   balance > 0.1   balance < 1 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_DEC2" = { stored = 0   balance > 0   balance < 0.1 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_INT"  = { stored = 0   balance > 0 }
+		"RESOURCE_GROUP_DEFAULT_NUL"             = { stored = 0   balance = 0 }
+	}
+	onclick = market
+}
+
+# Alloys
+tb_alloys_group = {
+	resources = { alloys }
+	localization = {
+		"RESOURCE_GROUP_DEFAULT_NUL" = default
+		
+		# Decimal values - 2 digits
+		# "RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_NEG_RSV"  = { stored >= 1010000 stored < 10000000   balance > -10000 balance <= -1000 }
+		# "RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_NEG_RSV"  = { stored >= 1010000 stored < 10000000   balance > -1     balance <= -0.1 }
+		# "RESOURCE_GROUP_STORED_DEC2_BALANCE_INT_NEG_RSV"  = { stored >= 1010000 stored < 10000000   balance > -10000 balance < 0 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_INT_NEG"      = { stored >= 1010000 stored < 10000000   balance < 0 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_NEG"  = { stored >= 1010000 stored < 10000000   balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_NEG"  = { stored >= 1010000 stored < 10000000   balance > -1   balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_INT_NEG"  = { stored >= 1010000 stored < 10000000   balance < 0 }
+		
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_MAX"  = { stored >= max   max >= 1010000 max < 10000000   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_MAX"  = { stored >= max   max >= 1010000 max < 10000000   balance >= 0.1  balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_INT_MAX"  = { stored >= max   max >= 1010000 max < 10000000 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC" = { stored >= 1010000 stored < 10000000   balance >= 1000  balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC" = { stored >= 1010000 stored < 10000000   balance >= 0.1   balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_INT" = { stored >= 1010000 stored < 10000000   balance > 0 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_NUL" = { stored >= 1010000 stored < 10000000   balance = 0 }
+		
+		# Negative balance with reserves
+		# "RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG_RSV"  = { stored >= 50000   balance > -2000 balance <= -1000 }
+		# "RESOURCE_GROUP_STORED_INT_BALANCE_INT_NEG_RSV"  = { stored >= 25000   balance > -1000 balance <= -500 }
+		# "RESOURCE_GROUP_STORED_INT_BALANCE_INT_NEG_RSV"  = { stored >= 15000   balance > -500  balance <= -200 }
+		# "RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG_RSV"  = { stored >= 10000   balance > -1    balance <= -0.1 }
+		# "RESOURCE_GROUP_STORED_INT_BALANCE_DEC2_NEG_RSV" = { stored >= 10000   balance > -0.1  balance < 0 }
+		# "RESOURCE_GROUP_STORED_INT_BALANCE_INT_NEG_RSV"  = { stored >= 10000   balance > -200  balance < 0 }
+		
+		# Negative balance
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"   = { stored >= 1100000 stored < 100000000   balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"   = { stored >= 1100000 stored < 100000000   balance > -1   balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2_NEG"  = { stored >= 1100000 stored < 100000000   balance > -0.1   balance < 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_NEG"   = { stored >= 1100000 stored < 100000000   balance < 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"   = { stored >= 1000    stored < 10000   balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"   = { stored >= 1000    stored < 10000   balance > -1   balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2_NEG"  = { stored >= 1000    stored < 10000   balance > -0.1   balance < 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_NEG"   = { stored >= 1000    stored < 10000   balance < 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG"   = { balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG"   = { balance > -1   balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2_NEG"  = { balance > -0.1   balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_NEG"                  = { balance < 0 }
+		
+		# Max capacity
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_MAX"  = { stored >= max   max >= 1100000 max < 100000000   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_MAX"  = { stored >= max   max >= 1100000 max < 100000000   balance >= 0.1  balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_MAX" = { stored >= max   max >= 1100000 max < 100000000   balance > 0   balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_MAX"  = { stored >= max   max >= 1100000 max < 100000000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_MAX"  = { stored >= max   max >= 1000    max < 10000   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_MAX"  = { stored >= max   max >= 1000    max < 10000   balance >= 0.1  balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2_MAX" = { stored >= max   max >= 1000    max < 10000   balance > 0   balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_MAX"  = { stored >= max   max >= 1000    max < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_MAX"  = { stored >= max   max > 0   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_MAX"  = { stored >= max   max > 0   balance >= 0.1  balance < 1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2_MAX" = { stored >= max   max > 0   balance > 0   balance < 0.1 }
+		"RESOURCE_GROUP_DEFAULT_MAX"                 = { stored >= max   max > 0 }
+		
+		# Decimal values
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"   = { stored >= 1000000  stored < 100000000   balance >= 1000  balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"   = { stored >= 1000000  stored < 100000000   balance >= 0.1   balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2"  = { stored >= 1000000  stored < 100000000   balance > 0    balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT"   = { stored >= 1000000  stored < 100000000   balance > 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"   = { stored >= 1000   stored < 10000   balance >= 1000  balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"   = { stored >= 1000   stored < 10000   balance >= 0.1   balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2"  = { stored >= 1000   stored < 10000   balance > 0    balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT"   = { stored >= 1000   stored < 10000   balance > 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"   = { stored >= 0.1  stored < 1    balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"   = { stored >= 0.1  stored < 1    balance >= 0.1 balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2"  = { stored >= 0.1  stored < 1    balance > 0  balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT"   = { stored >= 0.1  stored < 1    balance > 0 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC"  = { stored > 0   stored < 0.1    balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC"  = { stored > 0   stored < 0.1    balance >= 0.1 balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC2" = { stored > 0   stored < 0.1    balance > 0  balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_INT"  = { stored > 0   stored < 0.1    balance > 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC"   = { stored > 0   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC"   = { stored > 0   balance >= 0.1  balance < 1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2"  = { stored > 0   balance > 0   balance < 0.1 }
+		"RESOURCE_GROUP_DEFAULT"                  = { stored > 0   balance > 0 }
+		
+		# Null values
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_NUL"  = { stored >= 1000000 stored < 100000000   balance = 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_NUL"  = { stored >= 1000    stored < 10000   balance = 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_NUL"  = { stored > 0   balance = 0 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_DEC"  = { stored = 0   balance > 0.1   balance < 1 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_DEC2" = { stored = 0   balance > 0   balance < 0.1 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_INT"  = { stored = 0   balance > 0 }
+		"RESOURCE_GROUP_DEFAULT_NUL"             = { stored = 0   balance = 0 }
+	}
+	onclick = market
+}
+
+# Consumer Goods
+tb_consumer_goods_group = {
+	resources = { consumer_goods }
+	localization = {
+		"RESOURCE_GROUP_DEFAULT_NUL" = default
+		
+		# Decimal values - 2 digits
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_NEG_RSV"  = { stored >= 1010000 stored < 10000000   balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_NEG_RSV"  = { stored >= 1010000 stored < 10000000   balance > -1     balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_INT_NEG_RSV"  = { stored >= 1010000 stored < 10000000   balance > -10000 balance < 0 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_INT_NEG"      = { stored >= 1010000 stored < 10000000   balance < 0 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_NEG"  = { stored >= 1010000 stored < 10000000   balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_NEG"  = { stored >= 1010000 stored < 10000000   balance > -1   balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_INT_NEG"  = { stored >= 1010000 stored < 10000000   balance < 0 }
+		
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_MAX"  = { stored >= max   max >= 1010000 max < 10000000   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_MAX"  = { stored >= max   max >= 1010000 max < 10000000   balance >= 0.1  balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_INT_MAX"  = { stored >= max   max >= 1010000 max < 10000000 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC" = { stored >= 1010000 stored < 10000000   balance >= 1000  balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC" = { stored >= 1010000 stored < 10000000   balance >= 0.1   balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_INT" = { stored >= 1010000 stored < 10000000   balance > 0 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_NUL" = { stored >= 1010000 stored < 10000000   balance = 0 }
+		
+		# Negative balance with reserves
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG_RSV"  = { stored >= 50000   balance > -2000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_INT_NEG_RSV"  = { stored >= 25000   balance > -1000 balance <= -500 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_INT_NEG_RSV"  = { stored >= 15000   balance > -500  balance <= -200 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG_RSV"  = { stored >= 10000   balance > -1    balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2_NEG_RSV" = { stored >= 10000   balance > -0.1  balance < 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_INT_NEG_RSV"  = { stored >= 10000   balance > -200  balance < 0 }
+		
+		# Negative balance
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"   = { stored >= 1100000 stored < 100000000   balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"   = { stored >= 1100000 stored < 100000000   balance > -1   balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2_NEG"  = { stored >= 1100000 stored < 100000000   balance > -0.1   balance < 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_NEG"   = { stored >= 1100000 stored < 100000000   balance < 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"   = { stored >= 1000    stored < 10000   balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"   = { stored >= 1000    stored < 10000   balance > -1   balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2_NEG"  = { stored >= 1000    stored < 10000   balance > -0.1   balance < 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_NEG"   = { stored >= 1000    stored < 10000   balance < 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG"   = { balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG"   = { balance > -1   balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2_NEG"  = { balance > -0.1   balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_NEG"                  = { balance < 0 }
+		
+		# Max capacity
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_MAX"  = { stored >= max   max >= 1100000 max < 100000000   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_MAX"  = { stored >= max   max >= 1100000 max < 100000000   balance >= 0.1  balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_MAX" = { stored >= max   max >= 1100000 max < 100000000   balance > 0   balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_MAX"  = { stored >= max   max >= 1100000 max < 100000000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_MAX"  = { stored >= max   max >= 1000    max < 10000   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_MAX"  = { stored >= max   max >= 1000    max < 10000   balance >= 0.1  balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2_MAX" = { stored >= max   max >= 1000    max < 10000   balance > 0   balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_MAX"  = { stored >= max   max >= 1000    max < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_MAX"  = { stored >= max   max > 0   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_MAX"  = { stored >= max   max > 0   balance >= 0.1  balance < 1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2_MAX" = { stored >= max   max > 0   balance > 0   balance < 0.1 }
+		"RESOURCE_GROUP_DEFAULT_MAX"                 = { stored >= max   max > 0 }
+		
+		# Decimal values
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"   = { stored >= 1000000  stored < 100000000   balance >= 1000  balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"   = { stored >= 1000000  stored < 100000000   balance >= 0.1   balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2"  = { stored >= 1000000  stored < 100000000   balance > 0    balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT"   = { stored >= 1000000  stored < 100000000   balance > 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"   = { stored >= 1000   stored < 10000   balance >= 1000  balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"   = { stored >= 1000   stored < 10000   balance >= 0.1   balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2"  = { stored >= 1000   stored < 10000   balance > 0    balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT"   = { stored >= 1000   stored < 10000   balance > 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"   = { stored >= 0.1  stored < 1    balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"   = { stored >= 0.1  stored < 1    balance >= 0.1 balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2"  = { stored >= 0.1  stored < 1    balance > 0  balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT"   = { stored >= 0.1  stored < 1    balance > 0 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC"  = { stored > 0   stored < 0.1    balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC"  = { stored > 0   stored < 0.1    balance >= 0.1 balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC2" = { stored > 0   stored < 0.1    balance > 0  balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_INT"  = { stored > 0   stored < 0.1    balance > 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC"   = { stored > 0   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC"   = { stored > 0   balance >= 0.1  balance < 1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2"  = { stored > 0   balance > 0   balance < 0.1 }
+		"RESOURCE_GROUP_DEFAULT"                  = { stored > 0   balance > 0 }
+		
+		# Null values
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_NUL"  = { stored >= 1000000 stored < 100000000   balance = 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_NUL"  = { stored >= 1000    stored < 10000   balance = 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_NUL"  = { stored > 0   balance = 0 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_DEC"  = { stored = 0   balance > 0.1   balance < 1 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_DEC2" = { stored = 0   balance > 0   balance < 0.1 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_INT"  = { stored = 0   balance > 0 }
+		"RESOURCE_GROUP_DEFAULT_NUL"             = { stored = 0   balance = 0 }
+	}
+	onclick = market
+}
+
+# Unity
+tb_unity_group = {
+	resources = { unity }
+	localization = {
+		"RESOURCE_GROUP_DEFAULT_NUL" = default
+		
+		# Low income
+		"RESOURCE_GROUP_STORED_INT_BALANCE_INT_LOW"  = { stored >= 20000   balance >= 1   balance < 200 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_INT_LOW"  = { stored >= 10000   balance >= 1   balance < 100 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_LOW"  = { stored >= 4000    balance >= 1   balance < 60 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_LOW"  = { stored >= 2000    balance >= 1   balance < 40 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_LOW"  = { stored >= 1000    balance >= 1   balance < 20 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_LOW"  = { stored >= 100     balance >= 1   balance < 10 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2_LOW" = { stored >= 1000 stored < 10000   balance > 0  balance < 0.1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_LOW"  = { stored > 0        balance >= 0.1 balance < 1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2_LOW" = { stored > 0        balance > 0  balance < 0.1 }
+		
+		# Decimal values - 2 digits
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_NEG_RSV"  = { stored >= 1010000 stored < 10000000   balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_NEG_RSV"  = { stored >= 1010000 stored < 10000000   balance > -1     balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_INT_NEG_RSV"  = { stored >= 1010000 stored < 10000000   balance > -10000 balance < 0 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_INT_NEG"      = { stored >= 1010000 stored < 10000000   balance < 0 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_NEG"  = { stored >= 1010000 stored < 10000000   balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC_NEG"  = { stored >= 1010000 stored < 10000000   balance > -1   balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_INT_NEG"  = { stored >= 1010000 stored < 10000000   balance < 0 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC" = { stored >= 1010000 stored < 10000000   balance >= 1000  balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC" = { stored >= 1010000 stored < 10000000   balance >= 0.1   balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_INT" = { stored >= 1010000 stored < 10000000   balance > 0 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_NUL" = { stored >= 1010000 stored < 10000000   balance = 0 }
+		
+		# Negative balance with reserves
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG_RSV"  = { stored >= 50000   balance > -2000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_INT_NEG_RSV"  = { stored >= 25000   balance > -1000 balance <= -500 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_INT_NEG_RSV"  = { stored >= 15000   balance > -500  balance <= -200 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG_RSV"  = { stored >= 10000   balance > -1    balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2_NEG_RSV" = { stored >= 10000   balance > -0.1  balance < 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_INT_NEG_RSV"  = { stored >= 10000   balance > -200  balance < 0 }
+		
+		# Negative balance
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"   = { stored >= 1100000 stored < 100000000   balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"   = { stored >= 1100000 stored < 100000000   balance > -1   balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2_NEG"  = { stored >= 1100000 stored < 100000000   balance > -0.1   balance < 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_NEG"   = { stored >= 1100000 stored < 100000000   balance < 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"   = { stored >= 1000    stored < 10000   balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"   = { stored >= 1000    stored < 10000   balance > -1   balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2_NEG"  = { stored >= 1000    stored < 10000   balance > -0.1   balance < 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_NEG"   = { stored >= 1000    stored < 10000   balance < 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG"   = { balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG"   = { balance > -1   balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2_NEG"  = { balance > -0.1   balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_NEG"                  = { balance < 0 }
+		
+		# Max capacity
+		# not needed for unity
+		
+		# Decimal values
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"   = { stored >= 1000000  stored < 100000000   balance >= 1000  balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"   = { stored >= 1000000  stored < 100000000   balance >= 0.1   balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2"  = { stored >= 1000000  stored < 100000000   balance > 0    balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT"   = { stored >= 1000000  stored < 100000000   balance > 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"   = { stored >= 1000   stored < 10000   balance >= 1000  balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"   = { stored >= 1000   stored < 10000   balance >= 0.1   balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2"  = { stored >= 1000   stored < 10000   balance > 0    balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT"   = { stored >= 1000   stored < 10000   balance > 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"   = { stored >= 0.1  stored < 1    balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"   = { stored >= 0.1  stored < 1    balance >= 0.1 balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2"  = { stored >= 0.1  stored < 1    balance > 0  balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT"   = { stored >= 0.1  stored < 1    balance > 0 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC"  = { stored > 0   stored < 0.1    balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC"  = { stored > 0   stored < 0.1    balance >= 0.1 balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_DEC2" = { stored > 0   stored < 0.1    balance > 0  balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC2_BALANCE_INT"  = { stored > 0   stored < 0.1    balance > 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC"   = { stored > 0   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC"   = { stored > 0   balance >= 0.1  balance < 1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2"  = { stored > 0   balance > 0   balance < 0.1 }
+		"RESOURCE_GROUP_DEFAULT"                  = { stored > 0   balance > 0 }
+		
+		# Null values
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_NUL"  = { stored >= 1000000 stored < 100000000   balance = 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_NUL"  = { stored >= 1000    stored < 10000   balance = 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_NUL"  = { stored > 0   balance = 0 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_DEC"  = { stored = 0   balance > 0.1   balance < 1 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_DEC2" = { stored = 0   balance > 0   balance < 0.1 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_INT"  = { stored = 0   balance > 0 }
+		"RESOURCE_GROUP_DEFAULT_NUL"             = { stored = 0   balance = 0 }
+	}
+	onclick = edicts
+}
+
+# Influence
+tb_influence_group = {
+	resources = { influence }
+	localization = {
+		"RESOURCE_GROUP_DEFAULT_NUL" = default
+		
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG" = { stored >= 1000 stored < 10000   balance > -1 balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_NEG" = { stored >= 1000 stored < 10000   balance < 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG" = { balance > -1   balance <= -0.1 }
+		"RESOURCE_GROUP_DEFAULT_NEG"                = { balance < 0 }
+		
+		# Max capacity
+		# "RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_MAX" = { stored >= max   max >= 1000 max < 10000   balance >= 0.1 balance < 1 }
+		# "RESOURCE_GROUP_STORED_DEC_BALANCE_INT_MAX" = { stored >= max   max >= 1000 max < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_MAX" = { stored >= max   max > 0   balance >= 0.1  balance < 1 }
+		"RESOURCE_GROUP_DEFAULT_MAX"                = { stored >= max   max > 0 }
+		
+		# Decimal values
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC" = { stored >= 1000 stored < 10000   balance >= 0.1   balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT" = { stored >= 1000 stored < 10000   balance > 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_NUL" = { stored >= 1000 stored < 10000   balance = 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC" = { stored > 0   balance >= 0.1 balance < 1 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_DEC" = { stored = 0   balance >= 0.1 balance < 1 }
+		"RESOURCE_GROUP_DEFAULT"                = { stored > 0   balance > 0 }
+		
+		# Null values
+		"RESOURCE_GROUP_STORED_INT_BALANCE_NUL" = { stored > 0   balance = 0 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_INT" = { stored = 0   balance > 0 }
+		"RESOURCE_GROUP_DEFAULT_NUL"            = { stored = 0   balance = 0 }
+	}
+	onclick = contacts
+}
+
+# Minor artifacts
+tb_minor_artifacts_group = {
+	resources = { minor_artifacts }
+	localization = {
+		"RESOURCE_GROUP_DEFAULT_NUL" = default
+		
+		# Negative balance
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG" = { stored >= 1000 stored < 10000   balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG" = { stored >= 1000 stored < 10000   balance > -1     balance <= -0.1 }
+		"RESOURCE_GROUP_DEFAULT_NEG_DEC"            = { stored >= 1000 stored < 10000   balance < 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG" = { balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG" = { balance > -1     balance <= -0.1 }
+		"RESOURCE_GROUP_DEFAULT_NEG"                = { balance < 0 }
+		
+		# Max capacity
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_MAX"  = { stored >= max   max > 0   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_MAX"  = { stored >= max   max > 0   balance >= 0.1  balance < 1 }
+		"RESOURCE_GROUP_DEFAULT_MAX"                 = { stored >= max   max > 0 }
+		
+		# Decimal values
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC" = { stored >= 1000 stored < 10000   balance >= 1000  balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC" = { stored >= 1000 stored < 10000   balance >= 0.1   balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT" = { stored >= 1000 stored < 10000   balance > 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_NUL" = { stored >= 1000 stored < 10000   balance = 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC" = { stored > 0   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC" = { stored > 0   balance >= 0.1 balance < 1 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_DEC" = { stored = 0   balance >= 0.1 balance < 1 }
+		"RESOURCE_GROUP_DEFAULT"                = { stored > 0   balance > 0 }
+		
+		# Null values
+		"RESOURCE_GROUP_STORED_INT_BALANCE_NUL" = { stored > 0   balance = 0 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_INT" = { stored = 0   balance > 0 }
+		"RESOURCE_GROUP_DEFAULT_NUL"            = { stored = 0   balance = 0 }
+	}
+	onclick = traditions
+}
+
+# Volatile motes
+tb_volatile_motes_group = {
+	resources = { volatile_motes }
+	localization = {
+		"RESOURCE_GROUP_DEFAULT_NUL" = default
+		
+		# Negative balance with reserves
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG_RSV" = { stored >= 1000 stored < 10000   balance > -1  balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_NEG_RSV" = { stored >= 1000 stored < 10000   balance > -10 balance < 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG_RSV" = { stored >= 1000    balance > -1  balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_INT_NEG_RSV" = { stored >= 1000    balance > -10 balance < 0 }
+		
+		# Negative balance
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"  = { stored >= 1000 stored < 10000   balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"  = { stored >= 1000 stored < 10000   balance > -1     balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"  = { stored >= 1000 stored < 10000   balance > -0.1   balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_NEG_DEC"             = { stored >= 1000 stored < 10000   balance < 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG"  = { balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG"  = { balance > -1     balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2_NEG" = { balance > -0.1   balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_NEG"                 = { balance < 0 }
+		
+		# Max capacity
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_MAX"  = { stored >= max   max > 0   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_MAX"  = { stored >= max   max > 0   balance >= 0.1  balance < 1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2_MAX" = { stored >= max   max > 0   balance > 0  balance < 0.1 }
+		"RESOURCE_GROUP_DEFAULT_MAX"                 = { stored >= max   max > 0 }
+		
+		# Decimal values
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"  = { stored >= 1000 stored < 10000   balance >= 1000  balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"  = { stored >= 1000 stored < 10000   balance >= 0.1   balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2" = { stored >= 1000 stored < 10000   balance > 0    balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT"  = { stored >= 1000 stored < 10000   balance > 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC"  = { stored > 0   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC"  = { stored > 0   balance >= 0.1 balance < 1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2" = { stored > 0   balance > 0  balance < 0.1 }
+		"RESOURCE_GROUP_DEFAULT"                 = { stored > 0   balance > 0 }
+		
+		# Null values
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_NUL"  = { stored >= 1000 stored < 10000   balance = 0 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_DEC"  = { stored = 0   balance >= 0.1 balance < 1 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_DEC2" = { stored = 0   balance > 0  balance < 0.1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_NUL"  = { stored > 0   balance = 0 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_INT"  = { stored = 0   balance > 0 }
+		"RESOURCE_GROUP_DEFAULT_NUL"             = { stored = 0   balance = 0 }
+	}
+	onclick = market
+}
+
+# Exotic gases
+tb_exotic_gases_group = {
+	resources = { exotic_gases }
+	localization = {
+		"RESOURCE_GROUP_DEFAULT_NUL" = default
+		
+		# Negative balance with reserves
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG_RSV" = { stored >= 1000 stored < 10000   balance > -1  balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_NEG_RSV" = { stored >= 1000 stored < 10000   balance > -10 balance < 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG_RSV" = { stored >= 1000    balance > -1  balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_INT_NEG_RSV" = { stored >= 1000    balance > -10 balance < 0 }
+		
+		# Negative balance
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"  = { stored >= 1000 stored < 10000   balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"  = { stored >= 1000 stored < 10000   balance > -1     balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"  = { stored >= 1000 stored < 10000   balance > -0.1   balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_NEG_DEC"             = { stored >= 1000 stored < 10000   balance < 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG"  = { balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG"  = { balance > -1     balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2_NEG" = { balance > -0.1   balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_NEG"                 = { balance < 0 }
+		
+		# Max capacity
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_MAX"  = { stored >= max   max > 0   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_MAX"  = { stored >= max   max > 0   balance >= 0.1  balance < 1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2_MAX" = { stored >= max   max > 0   balance > 0  balance < 0.1 }
+		"RESOURCE_GROUP_DEFAULT_MAX"                 = { stored >= max   max > 0 }
+		
+		# Decimal values
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"  = { stored >= 1000 stored < 10000   balance >= 1000  balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"  = { stored >= 1000 stored < 10000   balance >= 0.1   balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2" = { stored >= 1000 stored < 10000   balance > 0    balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT"  = { stored >= 1000 stored < 10000   balance > 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC"  = { stored > 0   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC"  = { stored > 0   balance >= 0.1 balance < 1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2" = { stored > 0   balance > 0  balance < 0.1 }
+		"RESOURCE_GROUP_DEFAULT"                 = { stored > 0   balance > 0 }
+		
+		# Null values
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_NUL"  = { stored >= 1000 stored < 10000   balance = 0 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_DEC"  = { stored = 0   balance >= 0.1 balance < 1 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_DEC2" = { stored = 0   balance > 0  balance < 0.1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_NUL"  = { stored > 0   balance = 0 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_INT"  = { stored = 0   balance > 0 }
+		"RESOURCE_GROUP_DEFAULT_NUL"             = { stored = 0   balance = 0 }
+	}
+	onclick = market
+}
+
+# Rare crystals
+tb_rare_crystals_group = {
+	resources = { rare_crystals }
+	localization = {
+		"RESOURCE_GROUP_DEFAULT_NUL" = default
+		
+		# Negative balance with reserves
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG_RSV" = { stored >= 1000 stored < 10000   balance > -1  balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_NEG_RSV" = { stored >= 1000 stored < 10000   balance > -10 balance < 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG_RSV" = { stored >= 1000    balance > -1  balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_INT_NEG_RSV" = { stored >= 1000    balance > -10 balance < 0 }
+		
+		# Negative balance
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"  = { stored >= 1000 stored < 10000   balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"  = { stored >= 1000 stored < 10000   balance > -1     balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"  = { stored >= 1000 stored < 10000   balance > -0.1   balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_NEG_DEC"             = { stored >= 1000 stored < 10000   balance < 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG"  = { balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG"  = { balance > -1     balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2_NEG" = { balance > -0.1   balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_NEG"                 = { balance < 0 }
+		
+		# Max capacity
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_MAX"  = { stored >= max   max > 0   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_MAX"  = { stored >= max   max > 0   balance >= 0.1  balance < 1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2_MAX" = { stored >= max   max > 0   balance > 0  balance < 0.1 }
+		"RESOURCE_GROUP_DEFAULT_MAX"                 = { stored >= max   max > 0 }
+		
+		# Decimal values
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"  = { stored >= 1000 stored < 10000   balance >= 1000  balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"  = { stored >= 1000 stored < 10000   balance >= 0.1   balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2" = { stored >= 1000 stored < 10000   balance > 0    balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT"  = { stored >= 1000 stored < 10000   balance > 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC"  = { stored > 0   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC"  = { stored > 0   balance >= 0.1 balance < 1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2" = { stored > 0   balance > 0  balance < 0.1 }
+		"RESOURCE_GROUP_DEFAULT"                 = { stored > 0   balance > 0 }
+		
+		# Null values
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_NUL"  = { stored >= 1000 stored < 10000   balance = 0 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_DEC"  = { stored = 0   balance >= 0.1 balance < 1 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_DEC2" = { stored = 0   balance > 0  balance < 0.1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_NUL"  = { stored > 0   balance = 0 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_INT"  = { stored = 0   balance > 0 }
+		"RESOURCE_GROUP_DEFAULT_NUL"             = { stored = 0   balance = 0 }
+	}
+	onclick = market
+}
+
+# Living metal
+tb_living_metal_group = {
+	resources = { sr_living_metal }
+	localization = {
+		"RESOURCE_GROUP_DEFAULT_NUL" = default
+		
+		# Negative balance with reserves
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG_RSV" = { stored >= 1000 stored < 10000   balance > -1  balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_NEG_RSV" = { stored >= 1000 stored < 10000   balance > -10 balance < 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG_RSV" = { stored >= 1000    balance > -1  balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_INT_NEG_RSV" = { stored >= 1000    balance > -10 balance < 0 }
+		
+		# Negative balance
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"  = { stored >= 1000 stored < 10000   balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"  = { stored >= 1000 stored < 10000   balance > -1     balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"  = { stored >= 1000 stored < 10000   balance > -0.1   balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_NEG_DEC"             = { stored >= 1000 stored < 10000   balance < 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG"  = { balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG"  = { balance > -1     balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2_NEG" = { balance > -0.1   balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_NEG"                 = { balance < 0 }
+		
+		# Max capacity
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_MAX"  = { stored >= max   max > 0   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_MAX"  = { stored >= max   max > 0   balance >= 0.1  balance < 1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2_MAX" = { stored >= max   max > 0   balance > 0  balance < 0.1 }
+		"RESOURCE_GROUP_DEFAULT_MAX"                 = { stored >= max   max > 0 }
+		
+		# Decimal values
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"  = { stored >= 1000 stored < 10000   balance >= 1000  balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"  = { stored >= 1000 stored < 10000   balance >= 0.1   balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2" = { stored >= 1000 stored < 10000   balance > 0    balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT"  = { stored >= 1000 stored < 10000   balance > 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC"  = { stored > 0   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC"  = { stored > 0   balance >= 0.1 balance < 1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2" = { stored > 0   balance > 0  balance < 0.1 }
+		"RESOURCE_GROUP_DEFAULT"                 = { stored > 0   balance > 0 }
+		
+		# Null values
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_NUL"  = { stored >= 1000 stored < 10000   balance = 0 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_DEC"  = { stored = 0   balance >= 0.1 balance < 1 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_DEC2" = { stored = 0   balance > 0  balance < 0.1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_NUL"  = { stored > 0   balance = 0 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_INT"  = { stored = 0   balance > 0 }
+		"RESOURCE_GROUP_DEFAULT_NUL"             = { stored = 0   balance = 0 }
+	}
+	onclick = market
+}
+
+# Zro
+tb_zro_group = {
+	resources = { sr_zro }
+	localization = {
+		"RESOURCE_GROUP_DEFAULT_NUL" = default
+		
+		# Negative balance with reserves
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG_RSV" = { stored >= 1000 stored < 10000   balance > -1  balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_NEG_RSV" = { stored >= 1000 stored < 10000   balance > -10 balance < 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG_RSV" = { stored >= 1000    balance > -1  balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_INT_NEG_RSV" = { stored >= 1000    balance > -10 balance < 0 }
+		
+		# Negative balance
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"  = { stored >= 1000 stored < 10000   balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"  = { stored >= 1000 stored < 10000   balance > -1     balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"  = { stored >= 1000 stored < 10000   balance > -0.1   balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_NEG_DEC"             = { stored >= 1000 stored < 10000   balance < 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG"  = { balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG"  = { balance > -1     balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2_NEG" = { balance > -0.1   balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_NEG"                 = { balance < 0 }
+		
+		# Max capacity
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_MAX"  = { stored >= max   max > 0   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_MAX"  = { stored >= max   max > 0   balance >= 0.1  balance < 1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2_MAX" = { stored >= max   max > 0   balance > 0  balance < 0.1 }
+		"RESOURCE_GROUP_DEFAULT_MAX"                 = { stored >= max   max > 0 }
+		
+		# Decimal values
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"  = { stored >= 1000 stored < 10000   balance >= 1000  balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"  = { stored >= 1000 stored < 10000   balance >= 0.1   balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2" = { stored >= 1000 stored < 10000   balance > 0    balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT"  = { stored >= 1000 stored < 10000   balance > 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC"  = { stored > 0   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC"  = { stored > 0   balance >= 0.1 balance < 1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2" = { stored > 0   balance > 0  balance < 0.1 }
+		"RESOURCE_GROUP_DEFAULT"                 = { stored > 0   balance > 0 }
+		
+		# Null values
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_NUL"  = { stored >= 1000 stored < 10000   balance = 0 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_DEC"  = { stored = 0   balance >= 0.1 balance < 1 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_DEC2" = { stored = 0   balance > 0  balance < 0.1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_NUL"  = { stored > 0   balance = 0 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_INT"  = { stored = 0   balance > 0 }
+		"RESOURCE_GROUP_DEFAULT_NUL"             = { stored = 0   balance = 0 }
+	}
+	onclick = market
+}
+
+# Dark matter
+tb_dark_matter_group = {
+	resources = { sr_dark_matter }
+	localization = {
+		"RESOURCE_GROUP_DEFAULT_NUL" = default
+		
+		# Negative balance with reserves
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG_RSV" = { stored >= 1000 stored < 10000   balance > -1  balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_NEG_RSV" = { stored >= 1000 stored < 10000   balance > -10 balance < 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG_RSV" = { stored >= 1000    balance > -1  balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_INT_NEG_RSV" = { stored >= 1000    balance > -10 balance < 0 }
+		
+		# Negative balance
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"  = { stored >= 1000 stored < 10000   balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"  = { stored >= 1000 stored < 10000   balance > -1     balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"  = { stored >= 1000 stored < 10000   balance > -0.1   balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_NEG_DEC"             = { stored >= 1000 stored < 10000   balance < 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG"  = { balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG"  = { balance > -1     balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2_NEG" = { balance > -0.1   balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_NEG"                 = { balance < 0 }
+		
+		# Max capacity
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_MAX"  = { stored >= max   max > 0   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_MAX"  = { stored >= max   max > 0   balance >= 0.1  balance < 1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2_MAX" = { stored >= max   max > 0   balance > 0  balance < 0.1 }
+		"RESOURCE_GROUP_DEFAULT_MAX"                 = { stored >= max   max > 0 }
+		
+		# Decimal values
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"  = { stored >= 1000 stored < 10000   balance >= 1000  balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"  = { stored >= 1000 stored < 10000   balance >= 0.1   balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2" = { stored >= 1000 stored < 10000   balance > 0    balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT"  = { stored >= 1000 stored < 10000   balance > 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC"  = { stored > 0   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC"  = { stored > 0   balance >= 0.1 balance < 1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2" = { stored > 0   balance > 0  balance < 0.1 }
+		"RESOURCE_GROUP_DEFAULT"                 = { stored > 0   balance > 0 }
+		
+		# Null values
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_NUL"  = { stored >= 1000 stored < 10000   balance = 0 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_DEC"  = { stored = 0   balance >= 0.1 balance < 1 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_DEC2" = { stored = 0   balance > 0  balance < 0.1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_NUL"  = { stored > 0   balance = 0 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_INT"  = { stored = 0   balance > 0 }
+		"RESOURCE_GROUP_DEFAULT_NUL"             = { stored = 0   balance = 0 }
+	}
+	onclick = market
+}
+
+# Nanites
+tb_nanites_group = {
+	resources = { nanites }
+	localization = {
+		"RESOURCE_GROUP_DEFAULT_NUL" = default
+		
+		# Negative balance with reserves
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG_RSV" = { stored >= 1000 stored < 10000   balance > -1  balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_NEG_RSV" = { stored >= 1000 stored < 10000   balance > -10 balance < 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG_RSV" = { stored >= 1000    balance > -1  balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_INT_NEG_RSV" = { stored >= 1000    balance > -10 balance < 0 }
+		
+		# Negative balance
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"  = { stored >= 1000 stored < 10000   balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"  = { stored >= 1000 stored < 10000   balance > -1     balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"  = { stored >= 1000 stored < 10000   balance > -0.1   balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_NEG_DEC"             = { stored >= 1000 stored < 10000   balance < 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG"  = { balance > -10000 balance <= -1000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG"  = { balance > -1     balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2_NEG" = { balance > -0.1   balance < 0 }
+		"RESOURCE_GROUP_DEFAULT_NEG"                 = { balance < 0 }
+		
+		# Max capacity
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_MAX"  = { stored >= max   max > 0   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_MAX"  = { stored >= max   max > 0   balance >= 0.1  balance < 1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2_MAX" = { stored >= max   max > 0   balance > 0  balance < 0.1 }
+		"RESOURCE_GROUP_DEFAULT_MAX"                 = { stored >= max   max > 0 }
+		
+		# Decimal values
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"  = { stored >= 1000 stored < 10000   balance >= 1000  balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC"  = { stored >= 1000 stored < 10000   balance >= 0.1   balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC2" = { stored >= 1000 stored < 10000   balance > 0    balance < 0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT"  = { stored >= 1000 stored < 10000   balance > 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC"  = { stored > 0   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC"  = { stored > 0   balance >= 0.1 balance < 1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC2" = { stored > 0   balance > 0  balance < 0.1 }
+		"RESOURCE_GROUP_DEFAULT"                 = { stored > 0   balance > 0 }
+		
+		# Null values
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_NUL"  = { stored >= 1000 stored < 10000   balance = 0 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_DEC"  = { stored = 0   balance >= 0.1 balance < 1 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_DEC2" = { stored = 0   balance > 0  balance < 0.1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_NUL"  = { stored > 0   balance = 0 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_INT"  = { stored = 0   balance > 0 }
+		"RESOURCE_GROUP_DEFAULT_NUL"             = { stored = 0   balance = 0 }
+	}
+	onclick = edicts
+}
+
+# Strategic resources
+tb_others_group = {
+	resources = {
+		sr_zro
+		sr_dark_matter
+		sr_living_metal
+		nanites
+	}
+
+	localization = {
+		"RESOURCE_GROUP_DEFAULT_NUL" = default
+			
+		# Negative with reserves, total positive
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG_RSV_TOTAL_POS" = { stored >= 1000000 stored < 10000000   balance > -10000 balance < 0   total_balance >= 1000 total_balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG_RSV_TOTAL_POS" = { stored >= 1000000 stored < 10000000   balance > -10000 balance < 0   total_balance >= 0.1 total_balance < 10 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_NEG_RSV_TOTAL_POS" = { stored >= 1000000 stored < 10000000   balance > -10000 balance < 0   total_balance >= 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG_RSV_TOTAL_POS" = { stored >= 1000 stored < 10000   balance > -10 balance < 0   total_balance >= 1000 total_balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG_RSV_TOTAL_POS" = { stored >= 1000 stored < 10000   balance > -10 balance < 0   total_balance >= 0.1 total_balance < 10 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_NEG_RSV_TOTAL_POS" = { stored >= 1000 stored < 10000   balance > -10 balance < 0   total_balance >= 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG_RSV_TOTAL_POS" = { stored >= 1000            balance > -10 balance < 0   total_balance >= 1000 total_balance < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG_RSV_TOTAL_POS" = { stored >= 1000            balance > -10 balance < 0   total_balance >= 0.1 total_balance < 10 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_INT_NEG_RSV_TOTAL_POS" = { stored >= 1000            balance > -10 balance < 0   total_balance >= 0 }
+		
+		# Negative, total positive
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG_TOTAL_POS" = { stored >= 1000000 stored < 10000000   balance < 0   total_balance >= 1000 total_balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG_TOTAL_POS" = { stored >= 1000000 stored < 10000000   balance < 0   total_balance >= 0.1 total_balance < 10 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_NEG_TOTAL_POS" = { stored >= 1000000 stored < 10000000   balance < 0   total_balance >= 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG_TOTAL_POS" = { stored >= 1000 stored < 10000   balance < 0   total_balance >= 1000 total_balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG_TOTAL_POS" = { stored >= 1000 stored < 10000   balance < 0   total_balance >= 0.1 total_balance < 10 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_NEG_TOTAL_POS" = { stored >= 1000 stored < 10000   balance < 0   total_balance >= 0 }
+		
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG_TOTAL_POS" = { balance < 0   total_balance >= 1000 total_balance < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG_TOTAL_POS" = { balance < 0   total_balance >= 0.1  total_balance < 10 }
+		"RESOURCE_GROUP_DEFAULT_NEG_TOTAL_POS"                = { balance < 0   total_balance >= 0 }
+		
+		# Negative with reserves
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG_RSV"
+		= { stored >= 1000000 stored < 10000000   balance > -10000 balance < 0   total_balance > -10 total_balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_NEG_RSV"
+		= { stored >= 1000000 stored < 10000000   balance > -10000 balance < 0   total_balance > -1000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG_RSV"
+		= { stored >= 1000 stored < 10000   balance > -10 balance < 0   total_balance > -10000 total_balance <= -1000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG_RSV"
+		= { stored >= 1000 stored < 10000   balance > -10 balance < 0   total_balance > -10 total_balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_NEG_RSV"
+		= { stored >= 1000 stored < 10000   balance > -10 balance < 0   total_balance > -1000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG_RSV"
+		= { stored >= 1000            balance > -10 balance < 0   total_balance > -10 total_balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_INT_NEG_RSV" 
+		= { stored >= 1000            balance > -10 balance < 0   total_balance > -1000 }
+		
+		# Negative values
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"
+		= { stored >= 1000000 stored < 10000000   balance < 0   total_balance > -10    total_balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG" 
+		= { stored >= 1000000 stored < 10000000   balance < 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_NEG"
+		= { stored >= 1000 stored < 10000   balance < 0   total_balance > -10    total_balance <= -0.1 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG"
+		= { stored >= 1000 stored < 10000   balance < 0 }
+		
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG" = { balance < 0   total_balance > -10000 total_balance <= -1000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_NEG" = { balance < 0   total_balance > -10    total_balance <= -0.1 }
+		"RESOURCE_GROUP_DEFAULT_NEG"                = { balance < 0 }
+		
+		# Max capacity
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_MAX" = { stored >= max   max >= 1000000 max < 10000000   total_balance >= 1000 total_balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_MAX" = { stored >= max   max >= 1000000 max < 10000000   total_balance >= 0.1  total_balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_MAX" = { stored >= max   max >= 1000000 max < 10000000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_MAX" = { stored >= max   max >= 1000    max < 10000   total_balance >= 1000 total_balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC_MAX" = { stored >= max   max >= 1000    max < 10000   total_balance >= 0.1  total_balance < 1 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT_MAX" = { stored >= max   max >= 1000    max < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_MAX" = { stored >= max   max > 0   balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC_MAX" = { stored >= max   max > 0   balance >= 0.1  balance < 1 }
+		"RESOURCE_GROUP_DEFAULT_MAX"                = { stored >= max   max > 0 }
+		
+		# Decimal values
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC" = { stored >= 1000000 stored < 10000000   total_balance >= 1000  total_balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC" = { stored >= 1000000 stored < 10000000   total_balance >= 0.1   total_balance < 10 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT" = { stored >= 1000000 stored < 10000000   total_balance > 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_NUL" = { stored >= 1000 stored < 10000   total_balance = 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC" = { stored >= 1000 stored < 10000   total_balance >= 1000  total_balance < 10000 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_DEC" = { stored >= 1000 stored < 10000   total_balance >= 0.1   total_balance < 10 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_INT" = { stored >= 1000 stored < 10000   total_balance > 0 }
+		"RESOURCE_GROUP_STORED_DEC_BALANCE_NUL" = { stored >= 1000 stored < 10000   total_balance = 0 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC" = { stored > 0   total_balance >= 1000 total_balance < 10000 }
+		"RESOURCE_GROUP_STORED_INT_BALANCE_DEC" = { stored > 0   total_balance >= 0.1  total_balance < 10 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_DEC" = { stored = 0   total_balance >= 0.1  total_balance < 10 }
+		"RESOURCE_GROUP_DEFAULT"                = { stored > 0   total_balance > 0 }
+		
+		# Null values
+		"RESOURCE_GROUP_STORED_INT_BALANCE_NUL" = { stored > 0   total_balance = 0 }
+		"RESOURCE_GROUP_STORED_NUL_BALANCE_INT" = { stored = 0   total_balance > 0 }
+		"RESOURCE_GROUP_DEFAULT_NUL"            = { stored = 0   total_balance = 0 }
+	}
+	onclick = market
+}
+
+# Physics research
+tb_physics_research_group = {
+	resources = { physics_research }
+	localization = {
+		"RESOURCE_GROUP_BALANCE_ONLY" = default
+		"RESOURCE_GROUP_BALANCE_ONLY_DEC_NEG"   = { balance > -10000  balance <= -1000 }
+		"RESOURCE_GROUP_BALANCE_ONLY_DEC_NEG"   = { balance > -1 balance <= -0.1 }
+		"RESOURCE_GROUP_BALANCE_ONLY_NEG"       = { balance < 0 }
+		"RESOURCE_GROUP_BALANCE_ONLY_DEC_EXTRA" = { balance >= 1000 balance < 10000 stored > 0 }
+		"RESOURCE_GROUP_BALANCE_ONLY_DEC"       = { balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_BALANCE_ONLY_EXTRA"     = { balance > 0 stored > 0 }
+		"RESOURCE_GROUP_BALANCE_ONLY"           = { balance > 0 }
+		"RESOURCE_GROUP_BALANCE_ONLY_NUL"       = { balance = 0 }
+	}
+	onclick = technology
+}
+
+# Society research
+tb_society_research_group = {
+	resources = { society_research }
+	localization = {
+		"RESOURCE_GROUP_BALANCE_ONLY" = default
+		"RESOURCE_GROUP_BALANCE_ONLY_DEC_NEG"   = { balance > -10000  balance <= -1000 }
+		"RESOURCE_GROUP_BALANCE_ONLY_DEC_NEG"   = { balance > -1 balance <= -0.1 }
+		"RESOURCE_GROUP_BALANCE_ONLY_NEG"       = { balance < 0 }
+		"RESOURCE_GROUP_BALANCE_ONLY_DEC_EXTRA" = { balance >= 1000 balance < 10000 stored > 0 }
+		"RESOURCE_GROUP_BALANCE_ONLY_DEC"       = { balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_BALANCE_ONLY_EXTRA"     = { balance > 0 stored > 0 }
+		"RESOURCE_GROUP_BALANCE_ONLY"           = { balance > 0 }
+		"RESOURCE_GROUP_BALANCE_ONLY_NUL"       = { balance = 0 }
+	}
+	onclick = technology
+}
+
+# Engineering research
+tb_engineering_research_group = {
+	resources = { engineering_research }
+	localization = {
+		"RESOURCE_GROUP_BALANCE_ONLY" = default
+		"RESOURCE_GROUP_BALANCE_ONLY_DEC_NEG"   = { balance > -10000  balance <= -1000 }
+		"RESOURCE_GROUP_BALANCE_ONLY_DEC_NEG"   = { balance > -1 balance <= -0.1 }
+		"RESOURCE_GROUP_BALANCE_ONLY_NEG"       = { balance < 0 }
+		"RESOURCE_GROUP_BALANCE_ONLY_DEC_EXTRA" = { balance >= 1000 balance < 10000 stored > 0 }
+		"RESOURCE_GROUP_BALANCE_ONLY_DEC"       = { balance >= 1000 balance < 10000 }
+		"RESOURCE_GROUP_BALANCE_ONLY_EXTRA"     = { balance > 0 stored > 0 }
+		"RESOURCE_GROUP_BALANCE_ONLY"           = { balance > 0 }
+		"RESOURCE_GROUP_BALANCE_ONLY_NUL"       = { balance = 0 }
+	}
+	onclick = technology
+}
+
+# Total research
+tb_research_group = {
+	resources = {
+		physics_research
+		society_research
+		engineering_research 
+	}
+	localization = {
+		"RESOURCE_GROUP_BALANCE_ONLY" = default
+		"RESOURCE_GROUP_BALANCE_ONLY_DEC_NEG_TOTAL_POS" = { balance < 0 total_balance >= 1000 total_balance < 10000 }
+		"RESOURCE_GROUP_BALANCE_ONLY_NEG_TOTAL_POS" = { balance < 0 total_balance > 0 }
+		"RESOURCE_GROUP_BALANCE_ONLY_DEC_NEG" = { balance < 0 total_balance > -10000 total_balance <= -1000 }
+		"RESOURCE_GROUP_BALANCE_ONLY_DEC_NEG" = { balance < 0 total_balance > -1     total_balance <= -0.1 }
+		"RESOURCE_GROUP_BALANCE_ONLY_NEG"     = { balance < 0 }
+		"RESOURCE_GROUP_BALANCE_ONLY_DEC"     = { total_balance >= 1000 total_balance < 10000 }
+		"RESOURCE_GROUP_BALANCE_ONLY_DEC"     = { total_balance > 0.1   total_balance < 1 }
+		"RESOURCE_GROUP_BALANCE_ONLY"         = { total_balance > 0 }
+		"RESOURCE_GROUP_BALANCE_ONLY_NUL"     = { total_balance = 0 }
+	}
+	onclick = technology
+}
+tb_research_group_dropdown = {
+	resources = {
+		physics_research
+		society_research
+		engineering_research 
+	}
+	localization = {
+		"RESOURCE_GROUP_BALANCE_ONLY" = default
+		
+		"RESOURCE_GROUP_BALANCE_DEC_EXTRA_STORED_DEC" = { total_balance >= 1000 total_balance < 10000   stored > 1000 stored <= 10000 }
+		"RESOURCE_GROUP_BALANCE_DEC_EXTRA_STORED_INT" = { total_balance >= 1000 total_balance < 10000   stored > 0 }
+		"RESOURCE_GROUP_BALANCE_DEC_EXTRA_STORED_NUL" = { total_balance >= 1000 total_balance < 10000   stored = 0 }
+		"RESOURCE_GROUP_BALANCE_INT_EXTRA_STORED_DEC" = { total_balance > 0   stored > 1000 stored <= 10000 }
+		"RESOURCE_GROUP_BALANCE_INT_EXTRA_STORED_INT" = { total_balance > 0   stored > 0 }
+		"RESOURCE_GROUP_BALANCE_INT_EXTRA_STORED_NUL" = { total_balance > 0   stored = 0 }
+		"RESOURCE_GROUP_BALANCE_NUL_EXTRA_STORED_DEC" = { total_balance = 0   stored > 1000 stored <= 10000 }
+		"RESOURCE_GROUP_BALANCE_NUL_EXTRA_STORED_INT" = { total_balance = 0   stored > 0 }
+		"RESOURCE_GROUP_BALANCE_ONLY_NUL"             = { total_balance = 0   stored = 0 }
+		
+		# "RESOURCE_GROUP_BALANCE_ONLY_DEC_NEG" = { balance > -10000  balance <= -1000 }
+		# "RESOURCE_GROUP_BALANCE_ONLY_DEC_NEG" = { balance > -1  balance <= -0.1 }
+		# "RESOURCE_GROUP_BALANCE_ONLY_NEG" = { balance < 0 }
+		# "RESOURCE_GROUP_BALANCE_ONLY_DEC" = { total_balance >= 1000 total_balance < 10000 }
+		# "RESOURCE_GROUP_BALANCE_ONLY_NUL" = { total_balance = 0 }
+	}
+	onclick = technology
+}
+
+# Menace
+tb_menace_group = {
+	resources = { menace }
+	localization = {
+		"RESOURCE_GROUP_STORED_ONLY" = default
+		"RESOURCE_GROUP_STORED_ONLY_DEC" = { stored >= 1000 }
+		"RESOURCE_GROUP_STORED_ONLY_NUL" = { stored = 0 }
+	}
+	onclick = traditions
+}
