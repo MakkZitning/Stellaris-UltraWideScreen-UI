@@ -5,6 +5,7 @@ Personal use, becouse of the lack of customation UI for ultra-wide-screen.
 Reference:
 
 [1]. UI Overhaul Dynamic https://steamcommunity.com/sharedfiles/filedetails/?id=1623423360&searchtext=
+
 [2]. !伞の暗蓝科技UI! https://steamcommunity.com/sharedfiles/filedetails/?id=2411818376&searchtext=wide+outliner
 
 [3]. Endless UI https://steamcommunity.com/sharedfiles/filedetails/?id=2856703363&searchtext=UI
