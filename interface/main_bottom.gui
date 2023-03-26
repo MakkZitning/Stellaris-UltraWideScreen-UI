@@ -313,7 +313,7 @@ guiTypes = {
 
 			background = {
 				name = "background"
-				spriteType = "GFX_ui_topbar_background"
+				spriteType = "GFX_topbar_background"
 			}
 
 			gridBoxType = {
@@ -336,7 +336,7 @@ guiTypes = {
 			clipping = no
 			background = {
 				name = "bg"
-				quadTextureSprite = "GFX_ui_topbar_background"
+				quadTextureSprite = "GFX_topbar_background"
 			}
 			## Filters
 			# 细节开关

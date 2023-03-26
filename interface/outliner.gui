@@ -312,7 +312,7 @@ guiTypes = {
 		buttonType = {
 			name = "background"
 			id = "background"
-			quadTextureSprite = "GFX_blue_tile_line"
+			quadTextureSprite = "GFX_green_tile_line"
 			clicksound = outliner_click_tab
 			size = { x = @sector_width y = @heading_height }
 			oversound = no_sound
