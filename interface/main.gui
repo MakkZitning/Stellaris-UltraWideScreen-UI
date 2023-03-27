@@ -175,29 +175,34 @@ guiTypes = {
 			@resource_bottom_pos_y = 24
 			@resource_height = 20
 			
-			@resource_1_1_pos_x = 7	
-			@resource_1_2_pos_x = 107
-			@resource_1_3_pos_x = 207
+			@section_1_bg_pos_x = 4
+			@resource_1_1_pos_x = 17	
+			@resource_1_2_pos_x = 117
+			@resource_1_3_pos_x = 217
 			
-			@resource_2_1_pos_x = 323
-			@resource_2_2_pos_x = 413
+			@section_2_bg_pos_x = 320
+			@resource_2_1_pos_x = 333
+			@resource_2_2_pos_x = 423
 			
-			@resource_3_1_pos_x = 522
-			@resource_3_2_pos_x = 612
+			@section_3_bg_pos_x = 519
+			@resource_3_1_pos_x = 532
+			@resource_3_2_pos_x = 622
 			# @resource_3_2_pos_x = 700
 			
-			@resource_4_1_pos_x = 720
-			@resource_4_2_pos_x = 793
-			@resource_4_3_pos_x = 873
-			@resource_4_4_pos_x = 942
+			@section_4_bg_pos_x = 718
+			@resource_4_1_pos_x = 730
+			@resource_4_2_pos_x = 803
+			@resource_4_3_pos_x = 883
+			@resource_4_4_pos_x = 952
 			
-			@resource_5_1_pos_x = 1020
-			@resource_5_2_pos_x = 1092
+			@section_5_bg_pos_x = 1017
+			@resource_5_1_pos_x = 1030
+			@resource_5_2_pos_x = 1102
 			
 			# Topbar sections
 			containerWindowType = { name = "topbar_section_1"
 				size = { width = 320 height = 45 }
-				position = { x = -6 y = 0 }
+				position = { x = @section_1_bg_pos_x y = 0 }
 				
 				containerWindowType = {
 					name = "topbar_section_bg"
@@ -212,7 +217,7 @@ guiTypes = {
 			}
 			containerWindowType = { name = "topbar_section_2"
 				size = { width = 203 height = 45 }
-				position = { x = 310 y = 0 }
+				position = { x = @section_2_bg_pos_x y = 0 }
 				
 				containerWindowType = {
 					name = "topbar_section_bg"
@@ -227,7 +232,7 @@ guiTypes = {
 			}
 			containerWindowType = { name = "topbar_section_3"
 				size = { width = 203 height = 45 }
-				position = { x = 509 y = 0 }
+				position = { x = @section_3_bg_pos_x y = 0 }
 				
 				containerWindowType = {
 					name = "topbar_section_bg"
@@ -242,7 +247,7 @@ guiTypes = {
 			}
 			containerWindowType = { name = "topbar_section_4"
 				size = { width = 303 height = 45 }
-				position = { x = 708 y = 0 }
+				position = { x = @section_4_bg_pos_x y = 0 }
 				
 				containerWindowType = {
 					name = "topbar_section_bg"
@@ -257,7 +262,7 @@ guiTypes = {
 			}
 			containerWindowType = { name = "topbar_section_5"
 				size = { width = 172 height = 45 }
-				position = { x = 1007 y = 0 }
+				position = { x = @section_5_bg_pos_x y = 0 }
 				
 				containerWindowType = {
 					name = "topbar_section_bg"
@@ -801,9 +806,10 @@ guiTypes = {
 			hide_animation_type = accelerated
 			animation_time = 200
 			
-			@resource_6_1_pos_x = 12
-			@resource_6_2_pos_x = 86
-			@resource_6_3_pos_x = 198
+			@section_6_bg_pos_x = 19
+			@resource_6_1_pos_x = 22
+			@resource_6_2_pos_x = 96
+			@resource_6_3_pos_x = 208
 
 			containerWindowType = { name = "topbar_section_7"
 				size = { width = 208 height = 45 } # 98 / 208 / 304
@@ -811,7 +817,7 @@ guiTypes = {
 				containerWindowType = {
 					name = "topbar_section_bg"
 					size = { width = -9 height = @topbar_bg_h }
-					position = { x = 9 y = @topbar_bg_pos_y }
+					position = { x = @section_6_bg_pos_x y = @topbar_bg_pos_y }
 					
 					background = {
 						name = "topbar_section_bg"

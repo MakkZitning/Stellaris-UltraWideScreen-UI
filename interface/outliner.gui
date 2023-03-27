@@ -2053,8 +2053,8 @@ guiTypes = {
 	#----------------------------- 信息缩略表选项窗口 -----------------------------
     containerWindowType = {
         name = "outliner_options_window"
-        size = { width = 300 height = 625 }
-     	position = { x = @options_start_x y = @outliner_start_y }
+        size = { width = 300 height = 1000 }
+     	position = { x = -749 y = 200 }  # 575
         orientation = upper_right
         moveable = yes
 
@@ -2102,74 +2102,69 @@ guiTypes = {
 			position = { x = 5 y= 60 }
 			orientation = "UPPER_LEFT"
 			priority = 100
-			size = { x = 279 y = 420 }
+			size = { x = 279 y = 850 }
 			borderSize = { x=0 y=0 }
 			scrollbartype = "standardlistbox_slider"
 			spacing = 0
 		}
 
-		iconType = {
-			name = "divider_horizontal_1"
-			position = { x = 23 y = 478 }
-			quadTextureSprite = "GFX_line_horizontal"
-		}
-
+		# 切换行星图标
+		# iconType = {
+		# 	name = "divider_horizontal_1"
+		# 	position = { x = 23 y = 478 }
+		# 	quadTextureSprite = "GFX_line_horizontal"
+		# }
 		instantTextBoxType = {
 			name = "planet_display_mode_spinner_title"
-			position = { x = 23 y = 495 }
+			position = { x = 23 y = 865 }
 			maxWidth = 250
 			font = "cg_16b"
 			text = "OL_PLANET_MODE"
 			text_color_code = "E"
 			format = center
 		}
-
 		instantTextBoxType = {
 			name = "planet_display_mode_spinner_value"
-			position = { x = @name_start_x y = 515 }
+			position = { x = @name_start_x y = 885 }
 			maxWidth = 200
 			font = "cg_16b"
 			text = "" # Set in code
 			format = center
 		}
-
 		spinnerType = {
 			id = "planet_display_mode_spinner"
 			name = "planet_display_mode_spinner"
-			position = { x = 25 y = 510 }
+			position = { x = 25 y = 880 }
 			size = { x = 240 y = 30 }
 			borderSize = { x = 16 y = 16 }
 			horizontal = 1
 			leftbutton = "spinner_upButton"
 			rightbutton = "spinner_downButton"
-
 			guiButtonType = {
 				name = "spinner_upButton"
 				quadTextureSprite = "scrollbar_leftbutton"
 			}
-
 			guiButtonType = {
 				name = "spinner_downButton"
 				quadTextureSprite = "scrollbar_rightbutton"
 			}
 		}
-
-		iconType = {
-			name = "divider_horizontal_2"
-			position = { x = 23 y = 542 }
-			quadTextureSprite = "GFX_line_horizontal"
-		}
+		# iconType = {
+		# 	name = "divider_horizontal_2"
+		# 	position = { x = 23 y = 542 }
+		# 	quadTextureSprite = "GFX_line_horizontal"
+		# }
 
 		checkboxType = {
 			name = "show_focus_enabled_sectors"
-			position = { x = 5 y = 559 }
+			position = { x = 5 y = 929 }
  			quadTextureSprite = "GFX_checkbox_20_20_01"
 			pdx_tooltip = "OL_TOGGLE_VISIBILITY_SECTORS_WITH_FOCUS_DESC"
  		}
 
 		instantTextBoxType = {
 			name = "show_focus_enabled_sectors_label"
-			position = { x = 35 y = 566 }
+			position = { x = 35 y = 936 }
 			font = "cg_16b"
 			text = "OL_TOGGLE_VISIBILITY_SECTORS_WITH_FOCUS"
 			text_color_code = "E"
@@ -2180,14 +2175,14 @@ guiTypes = {
 
 		checkboxType = {
  			name = "show_focus_disabled_sectors"
-			position = { x = 5 y = 589 }
+			position = { x = 5 y = 959 }
  			quadTextureSprite = "GFX_checkbox_20_20_01"
 			pdx_tooltip = "OL_TOGGLE_VISIBILITY_SECTORS_NO_FOCUS_DESC"
  		}
 
 		instantTextBoxType = {
 			name = "show_focus_disabled_sectors_label"
-			position = { x = 35 y = 596 }
+			position = { x = 35 y = 966 }
 			font = "cg_16b"
 			text = "OL_TOGGLE_VISIBILITY_SECTORS_NO_FOCUS"
 			text_color_code = "E"
@@ -2270,7 +2265,7 @@ guiTypes = {
     containerWindowType = {
         name = "outliner_rearrange_window"
         size = { width = 300 height = 580 }
-     	position = { x = @options_start_x y = @outliner_start_y }
+     	position = { x = -749 y = 620 }
         orientation = upper_right
         moveable = yes
 

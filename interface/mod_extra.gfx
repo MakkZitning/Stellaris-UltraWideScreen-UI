@@ -1,4 +1,63 @@
 spriteTypes = {
+	spriteType = {
+		name = "GFX_message_frame"
+		texturefile = "gfx/interface/icons/message/message_frame.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_alerticon_banner_low"
+		texturefile = "gfx/interface/icons/alert_icon_1.dds"
+		noOfFrames = 1
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_alerticon_banner_med"
+		texturefile = "gfx/interface/icons/alert_icon_2.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 1
+		animation = {
+			animationmaskfile = "gfx/interface/icons/alert_icon_mask.dds"
+			animationtexturefile = "gfx/interface/icons/alert_icon_2_anim.dds"
+			animationrotation = -45.0
+			animationlooping = yes
+			animationtime = 20.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+	spriteType = {
+		name = "GFX_alerticon_banner_high"
+		texturefile = "gfx/interface/icons/alert_icon_3.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 1
+		animation = {
+			animationmaskfile = "gfx/interface/icons/alert_icon_mask.dds"
+			animationtexturefile = "gfx/interface/icons/alert_icon_3_anim.dds"
+			animationrotation = 0.0
+			animationlooping = yes
+			animationtime = 4.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "rotating"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.5 y = 1.5 }
+			animationframes = { 1 2 3 }
+		}
+	}
+	# alert icon lines
+	spriteType = {
+		name = "GFX_ui_alert_icon_1_line"
+		texturefile = "gfx/interface/icons/alerts/alert_icon_1_line.dds"
+	}
+	spriteType = {
+		name = "GFX_ui_alert_icon_2_line"
+		texturefile = "gfx/interface/icons/alerts/alert_icon_2_line.dds"
+	}
+	#
 	progressbarType = {
 		name = "GFX_ui_progressbar_thick"
 		color = { 1.0 1.0 1.0 }
@@ -13,5 +72,113 @@ spriteTypes = {
 		textureFile = "gfx/interface/tiles/tile_large_bg_plain.dds"
 		borderSize = { x = 1 y = 1 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	# 高亮选框
+	corneredTileSpriteType = {
+		name = "GFX_ui_outliner_entry_bg"
+		borderSize = { x = 15 y = 15 }
+		textureFile = "gfx/interface/buttons/outliner_entry.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_ui_outliner_entry_bg_selected"
+		borderSize = { x = 15 y = 15 }
+		textureFile = "gfx/interface/buttons/outliner_selected_entry.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	# 发光分界线
+	corneredTileSpriteType = {
+		name = "GFX_blue_tile_line"
+		textureFile = "gfx/interface/tiles/blue_tile_line.dds"
+		borderSize = { x=20 y=20 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_green_tile_line"
+		textureFile = "gfx/interface/tiles/green_tile_line.dds"
+		borderSize = { x=20 y=20 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	# 资源图标
+	spriteType = {
+		name = "GFX_resource_volatile_motes"
+		textureFile = "gfx/interface/icons/resources/volatile_motes.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_exotic_gases"
+		textureFile = "gfx/interface/icons/resources/exotic_gases.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_rare_crystals"
+		textureFile = "gfx/interface/icons/resources/rare_crystals.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_sr_living_metal"
+		textureFile = "gfx/interface/icons/resources/sr_living_metal.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_sr_zro"
+		textureFile = "gfx/interface/icons/resources/sr_zro.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_sr_dark_matter"
+		textureFile = "gfx/interface/icons/resources/sr_dark_matter.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_nanites"
+		textureFile = "gfx/interface/icons/resources/nanites.dds"
+	}
+	spriteType = {
+		name = "GFX_text_research"
+		texturefile = "gfx/interface/icons/text_icons/research.dds"
+	}
+	spriteType = {
+		name = "GFX_text_station"
+		texturefile = "gfx/interface/icons/text_icons/station.dds"
+	}
+	spriteType = {
+		name = "GFX_population_icon"
+		texturefile = "gfx/interface/icons/population.dds"
+	}
+	spriteType = {
+		name = "GFX_population_icon_large"
+		texturefile = "gfx/interface/icons/population_large.dds"
+	}
+	# 时间
+	spriteType = {
+		name = "GFX_topbar_running_44"
+		texturefile = "gfx/interface/topbar/running_bg_44.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/topbar/paused_mask_44.dds"
+			animationtexturefile = "gfx/interface/topbar/running_texture_44.dds"
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 20.0
+			animationdelay = 0.0
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+	spriteType = {
+		name = "GFX_topbar_paused_44"
+		texturefile = "gfx/interface/topbar/paused_bg_44.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/topbar/paused_mask_44.dds"
+			animationtexturefile = "gfx/interface/topbar/paused_texture_44.dds"
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 20000.0
+			animationdelay = 0.0
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
 	}
 }
