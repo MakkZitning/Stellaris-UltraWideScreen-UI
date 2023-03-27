@@ -1,0 +1,17 @@
+spriteTypes = {
+	progressbarType = {
+		name = "GFX_ui_progressbar_thick"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/progressbars/progressbar_thick.dds"
+		textureFile2 = "gfx/interface/progressbars/progressbar_thick_empty.dds"
+		size = { x = 160 y = 20 }
+		effectFile = "gfx/FX/progress.shader"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_ui_tile_large_bg_plain"
+		textureFile = "gfx/interface/tiles/tile_large_bg_plain.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+}

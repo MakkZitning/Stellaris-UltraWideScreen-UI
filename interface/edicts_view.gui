@@ -1,9 +1,13 @@
 @dynamic_extra = 0.8
 
+@edict_view_height = 829  # 640
+@edict_window_height = 768  # 600
+@edict_list_height = 746  # 561
+
 guiTypes = {
 	containerWindowType = {
 		name = "edicts_view"
-		size = { width = 595 height = 640 } 
+		size = { width = 595 height = @edict_view_height } 
 		dynamic_extra_height = @dynamic_extra
 		position = { x = -595 y = 40 }
 		show_position = { x = 35 y = 40 }
@@ -89,7 +93,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "edict_list_window"
 			position = { x=6 y=55 }
-			size = { width = 583 height = 579 }
+			size = { width = 583 height = @edict_window_height }
 			dynamic_extra_height = @dynamic_extra
 			dontRender = ""
         
@@ -102,7 +106,7 @@ guiTypes = {
 				name = "edict_list"
 				position = { x = 10 y = 8 }
 				backGround=""
-				size = { x = 550 y=561 }
+				size = { x = 550 y=@edict_list_height }
 				dynamic_extra_height = @dynamic_extra
 				spacing = 1
 				scrollbartype = "standardlistbox_slider"

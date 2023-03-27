@@ -79,7 +79,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "music_commands_win"
 			size = { width = 0 height = 0 }
-			position = { x = -450 y = 5 }
+			position = { x = -450 y = 2 }
 			orientation = upper_right
 			origo = upper_right
 			clipping = no
@@ -1248,7 +1248,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "background"
-			size = { width = 250 height = 785 }
+			size = { width = 250 height = 825 }
 			position = { x = 4 y = 5 }
 
 			background = {
@@ -1269,7 +1269,7 @@ guiTypes = {
 		gridBoxType = {
 			name = "gridbox"
 			position = { x = 33 y = 50 }
-			slotSize = { width = 54 height = 50 }
+			slotSize = { width = 54 height = 52 }
 			max_slots_horizontal = 1
 		}
 	}

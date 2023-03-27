@@ -1,9 +1,12 @@
 @dynamic_extra = 0.8
 
+@leaders_view_height = 829  # 640
+@leaders_list_height = 708 # 516
+
 guiTypes = {
 	containerWindowType = {
 		name = "topbar_leaders_view"
-		size = { width=1272 height=640 } 
+		size = { width=1272 height=@leaders_view_height } 
 		dynamic_extra_height = @dynamic_extra
 		position = { x = -1270 y = 40 }
 		show_position = { x = 35 y = 40 }
@@ -195,7 +198,7 @@ guiTypes = {
         
 		containerWindowType = {
 			name = "leader_frame_box2"
-			size = { width = 1250 height = 516 }
+			size = { width = 1250 height = @leaders_list_height }
 			dynamic_extra_height = @dynamic_extra
 			position = { x = 11 y = 113 }
         
@@ -208,7 +211,7 @@ guiTypes = {
         
 		containerWindowType = {
 			name = "leader_frame_area_1"
-			size = { width = 313 height = 516 }
+			size = { width = 313 height = @leaders_list_height }
 			dynamic_extra_height = @dynamic_extra
 			position = { x = 317 y = 113 }
         
@@ -221,7 +224,7 @@ guiTypes = {
         
 		containerWindowType = {
 			name = "leader_frame_area_2"
-			size = { width = 312 height = 516 }
+			size = { width = 312 height = @leaders_list_height }
 			dynamic_extra_height = @dynamic_extra
 			position = { x = 949 y = 113 }
         
@@ -236,7 +239,7 @@ guiTypes = {
 		smoothListboxType = {
 			name ="governors_list"
 			position = { x = 10 y = 113 }
-			size = { x= 293 y = 516 }
+			size = { x= 293 y = @leaders_list_height }
 			dynamic_extra_height = @dynamic_extra
 			scrollbartype = "standardlistbox_slider"
 			spacing = -4
@@ -246,7 +249,7 @@ guiTypes = {
 		smoothListboxType = {
 			name ="scientists_list"
 			position = { x = 319 y = 113 }
-			size = { x= 293 y = 516 }
+			size = { x= 293 y = @leaders_list_height }
 			dynamic_extra_height = @dynamic_extra
 			scrollbartype = "standardlistbox_slider"
 			spacing = -4
@@ -256,7 +259,7 @@ guiTypes = {
 		smoothListboxType = {
 			name ="admirals_list"
 			position = { x = 630 y = 113 }
-			size = { x= 293 y = 516 }
+			size = { x= 293 y = @leaders_list_height }
 			dynamic_extra_height = @dynamic_extra
 			scrollbartype = "standardlistbox_slider"
 			spacing = -4
@@ -266,7 +269,7 @@ guiTypes = {
 		smoothListboxType = {
 			name ="generals_list"
 			position = { x = 950 y = 113 }
-			size = { x= 293 y = 516 }
+			size = { x= 293 y = @leaders_list_height }
 			dynamic_extra_height = @dynamic_extra
 			scrollbartype = "standardlistbox_slider"
 			spacing = -4

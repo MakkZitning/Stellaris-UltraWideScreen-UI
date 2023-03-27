@@ -7,6 +7,10 @@
 @resource_h = 50
 @resource_value_y = 30
 
+@empire_view_height = 829  # 640
+@empire_window_height = 664  # 475
+@empire_list_height = 678  # 489
+
 guiTypes = {
 	containerWindowType = {
 		name = "empire_view"
@@ -21,7 +25,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "galaxy_view_background_box"
-			size = { width = 1272 height = 640 }
+			size = { width = 1272 height = @empire_view_height }
 			dynamic_extra_height = @dynamic_extra
 			position = { x = 0 y = 0 }
 
@@ -68,7 +72,7 @@ guiTypes = {
 			containerWindowType = {
 				name = "empire_list"
 				position = { x=11 y=140 }
-				size = { width= 1250 height= 489 }
+				size = { width= 1250 height= @empire_list_height }
 				dynamic_extra_height = @dynamic_extra
 
 				background = {
@@ -269,7 +273,7 @@ guiTypes = {
 				id = "list"
 				name = "list"
 				position = { x = 20 y = 138 }
-				size = { x= 1230 y = 475 }
+				size = { x= 1230 y = @empire_window_height }
 				dynamic_extra_height = @dynamic_extra
 				scrollbartype = "standardlistbox_slider"
 				spacing = 4

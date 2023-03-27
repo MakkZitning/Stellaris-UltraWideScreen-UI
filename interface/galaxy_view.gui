@@ -2,6 +2,17 @@ guiTypes = {
 	@dynamic_extra = 0.8
 	@dynamic_extra_left_panel = 0.8
 
+	@window_height = 789  # 620
+	@empire_list_height = 692  # @window_height - 122
+	@empire_window_height = 679  # @empire_list_height - 13
+
+	@empire_info_height = 739
+	@diplo_window_height = 290  # 97
+	@diplo_list_height = 283  # 90
+	@diplo_button_offset = 175  # -19
+	@espio_button_offset = 175  # -19
+	@zoom_button_offset = 185  # -9
+
 	containerWindowType = {
 		name = "galaxy_view"
 		show_position = { x = 35 y = 40 }
@@ -9,7 +20,7 @@ guiTypes = {
 		animation_time = 200
 		animation_type = decelerated
 
-		size = { width = 1272 height = 620 }
+		size = { width = 1272 height = @window_height }
 		dynamic_extra_height = @dynamic_extra
 		moveable = no
 
@@ -69,7 +80,7 @@ guiTypes = {
 				containerWindowType = {
 					name = "info_box"
 					position = { x = 11 y = 29 }
-					size = { width = 315 height = 544 }
+					size = { width = 315 height = @empire_info_height }
 					dynamic_extra_height = @dynamic_extra_left_panel
 
 					background = {
@@ -614,7 +625,7 @@ guiTypes = {
 
 				containerWindowType = {
 					name = "detailed_diplomacy_window"
-					size = { width = 305 height = 97}
+					size = { width = 305 height = @diplo_window_height }
 					dynamic_extra_height = @dynamic_extra_left_panel
 					position = { x = 16 y = 432 }
 					clipping = yes
@@ -627,7 +638,7 @@ guiTypes = {
 					smoothListboxType = {
 						name = "detailed_diplomacy_list"
 						position = { x = 10 y = 3 }
-						size = { x = 280 y = 90 }
+						size = { x = 280 y = @diplo_list_height }
 						dynamic_extra_height = @dynamic_extra_left_panel
 						scrollbarType = "standardlistbox_slider"
 					}
@@ -639,7 +650,7 @@ guiTypes = {
 					spriteType = "GFX_button_animated_110_34"
 					buttonText = "GALAXY_VIEW_EMPIRE_DIPLOMACY"
 					orientation = lower_left
-					position = { x = 7 y = -19 }
+					position = { x = 7 y = @diplo_button_offset }
 				}
 
 				buttonType={
@@ -648,13 +659,13 @@ guiTypes = {
 					spriteType = "GFX_button_animated_110_34"
 					buttonText = "GALAXY_VIEW_EMPIRE_ESPIONAGE"
 					orientation = lower_left
-					position = { x = 125 y = -19 }
+					position = { x = 125 y = @espio_button_offset }
 				}
 
 				buttonType = {
 					name = "zoom_to_capital_button"
 					quadTextureSprite = "GFX_fleetview_focus"
-					position = { x = 284 y = -9 }
+					position = { x = 284 y = @zoom_button_offset }
 					orientation = lower_left
 					pdx_tooltip = "ZOOM_TO_CAPITAL"
 				}
@@ -704,7 +715,7 @@ guiTypes = {
 			containerWindowType = {
 				name = "empire_list"
 				position = { x=335 y=75 }
-				size = { width= 926 height= 498 }
+				size = { width= 926 height= @empire_list_height }
 				dynamic_extra_height = @dynamic_extra
 
 				background = {
@@ -967,7 +978,7 @@ guiTypes = {
 					name = "galaxy_empires"
 					position = { x = -7 y = 0 }
 					backGround = ""
-					size = { x = 900 y = 485 }
+					size = { x = 900 y = @empire_window_height }
 					dynamic_extra_height = @dynamic_extra
 					scrollbarType = "standardlistbox_slider"
 					borderSize = { x = 0 y = 0 }

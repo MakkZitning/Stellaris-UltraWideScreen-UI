@@ -1,9 +1,13 @@
 @dynamic_extra = 0.8
 
+@policy_view_height = 829  # 640
+@policy_window_height = 768  # 579
+@policy_list_height = 746  # 557
+
 guiTypes = {
 	containerWindowType = {
 		name = "policies_view"
-		size = { width = 595 height = 640 } 
+		size = { width = 595 height = @policy_view_height } 
 		dynamic_extra_height = @dynamic_extra
 		position = { x = -595 y = 40 }
 		show_position = { x = 35 y = 40 }
@@ -103,7 +107,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "policy_list_window"
 			position = { x = 6 y = 55 }
-			size = { width = 583 height = 579 }
+			size = { width = 583 height = @policy_window_height }
 			dynamic_extra_height = @dynamic_extra
 			moveable = no
         
@@ -116,7 +120,7 @@ guiTypes = {
 				name = "policy_list"
 				position = { x = 10 y = 10 }
 				backGround=""
-				size = { x = 550 y=557 }
+				size = { x = 550 y=@policy_list_height }
 				dynamic_extra_height = @dynamic_extra
 				spacing = 1
 				scrollbartype = "standardlistbox_slider"
