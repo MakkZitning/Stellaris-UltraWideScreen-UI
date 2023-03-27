@@ -1,5 +1,8 @@
 @tab_height = -42
 
+@view_window_width = 850  # 850
+@view_window_height = 680  # 680
+
 guiTypes = {
 	positionType = {
 		name = "pop_category_base_size"
@@ -47,7 +50,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "planet_view"
 		orientation = upper_left
-		size = { width = 850 height = 680 }
+		size = { width = @view_window_width height = @view_window_height }
 		moveable = yes
 		position = { x = 300 y = 200 }
 		clipping = no
