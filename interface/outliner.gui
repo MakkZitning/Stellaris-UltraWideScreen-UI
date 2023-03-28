@@ -26,18 +26,7 @@ guiTypes = {
 	@name_start_x = 46  # 名称位置
 	@row_1_y = 3  # 第一行元素位置
 
-	@column_1_width	= 140
-	@column_1_start	= 28
-	@column_2_width	= 150
-	@column_2_start	= 172
-	@column_3_width	= 58
-	@column_3_start	= 326
-	@combat_power = -75
-	@civilian_leader_start = 16
-	@civilian_type_width = 130
-	@civilian_type_start = 38
-	@civilian_name_start = 172
-	@civilian_name_width = 175
+	@text_max_height = 20
 
 	#----------------------------- 大纲视图按钮 -----------------------------
 	containerWindowType = {
@@ -605,7 +594,6 @@ guiTypes = {
 		position = { x = 0 y = 0 }
 		orientation = upper_right
 		moveable = no
-		@text_max_height = 20
 		@text_bottom_y = 19
 		# 背景装饰
 		buttonType = {
@@ -670,7 +658,7 @@ guiTypes = {
 			name = "constructions"
 			size = { width = 100% height = 100% }
 			position = { x = 193 y = -15 }
-			orientation = "UPPER_LEFT"
+			orientation = upper_left
 			moveable = no
 
 			OverlappingElementsBoxType = {

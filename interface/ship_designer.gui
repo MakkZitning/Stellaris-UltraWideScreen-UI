@@ -6,7 +6,6 @@
 @design_list_height = 745  # 594
 @design_bg_height = 753  # 602
 
-@3d_view_height = 753  # 602
 @component_slot_y = -5  # -5
 @slot_bg_y = 4  # 4
 
