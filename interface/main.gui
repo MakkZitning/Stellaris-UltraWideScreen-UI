@@ -795,6 +795,65 @@ guiTypes = {
 					fixedsize = yes
 				}
 			}
+			containerWindowType = { name = "tb_research_group"
+				size = { width = 70 height = @resource_height }
+				position = { x = @resource_5_2_pos_x  y = @resource_bottom_pos_y }
+				
+				background = {
+					name = "background"
+					spriteType = "GFX_invisible"
+				}
+				iconType = {
+					name = "icon"
+					spriteType = "GFX_text_research"
+					position = { x = 3 y = 0 }
+					tooltip_mode_enabled = yes
+					alwaysTransparent = yes
+				}
+				instantTextBoxType = {
+					name = "amount"
+					font = "cg_16b"
+					position = { x = 24 y = 0 }
+					maxWidth = 50
+					maxHeight = 16
+					text = "0 / 0"
+					format = left
+					alwaysTransparent = yes
+					fixedsize = yes
+				}
+			}
+			dropDownBoxType = { name = "tb_research_group_dropdown"
+			 	size = { width = 20 height = 20 }
+			 	position = { x = @resource_5_2_pos_x  y = @resource_bottom_pos_y }
+				
+			 	background = {
+			 		name = "background"
+			 		spriteType = "GFX_invisible"
+			 	}
+				
+			 	expandedWindow = {
+			 		name = "expanded_window"
+			 		hide_position = { x = -59 y = -190 }
+			 		show_position = { x = -59 y = 22 }
+			 		size = { width = 120 height = 72 }
+			 		show_animation_type = decelerated
+			 		hide_animation_type = accelerated
+			 		animation_time = 200	
+					
+			 		background = {
+			 			name = "bg"
+			 			spriteType = "GFX_ui_extra_tile_bottom"
+			 		}
+			 		gridBoxType = {
+			 			name = "resources"
+			 			format = "UPPER_LEFT"
+			 			position = { x = 3 y = 3 }
+			 			size = { width = 110 height = 45 }
+			 			slotsize = { width = 110 height = 23 }
+			 			max_slots_horizontal = 1
+			 		}
+			 	}
+			}
 		}
 		
 		containerWindowType = { name = "topbar_extended"
