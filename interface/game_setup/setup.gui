@@ -135,7 +135,7 @@ guiTypes = {
 			name = "gamesetup_contents"
 			position = { x = 30 y = 68 }
 			size = { width = -15 height = -101 }
-			verticalScrollbar = "right_vertical_slider_thick"
+			verticalScrollbar = "right_vertical_slider"
 			clipping = yes
 			background = {
 				name = "background"
