@@ -8,7 +8,7 @@ guiTypes = {
 	@FLEET_MANAGER_TEMPLATE_NAME_WIDTH = 282
 	containerWindowType = {
 		name = "fleet_manager_view"
-		size = { width = 1196 height = 940 }  # 940
+		size = { width = 1196 height = 819 }  # 940
 		show_position = { x = 35 y = 50 }
 		hide_position = { x = -100% y = 50 }
 		animation_time = 200
@@ -404,7 +404,7 @@ guiTypes = {
 			}
 			containerWindowType = {
 				name = "templates_background"
-				size = { width = 300 height = 600 }
+				size = { width = 300 height = 489 }  # h=600
 				position = { x = 10 y = 280 }
 				background = {
 					name = "templates_background"
@@ -413,7 +413,7 @@ guiTypes = {
 			}
 			containerWindowType = {
 				name = "templates"
-				size = { width = 303 height = 600 }
+				size = { width = 303 height = 489 }  # 600
 				position = { x = 10 y = 280 }
 				margin = { top = 5 bottom = 5 }
 				clipping = yes
@@ -436,7 +436,7 @@ guiTypes = {
 			}
 			containerWindowType = {
 				name = "box2_3"
-				size = { width = 866 height = 600 }
+				size = { width = 866 height = 489 }
 				position = { x = 320 y = 280 }
 				clipping = no
 				background = {
@@ -605,7 +605,7 @@ guiTypes = {
 				}
 				containerWindowType = {
 					name = "designs_frame"
-					size = { width = 866 height = 549 }
+					size = { width = 866 height = 438 }  # 549
 					position = { x = 0 y = 0 }
 					background = {
 						name = "designs_frame"
@@ -614,7 +614,7 @@ guiTypes = {
 				}
 				containerWindowType = {
 					name = "designs"
-					size = { width = 863 height = 537 }
+					size = { width = 863 height = 426 }  # 537
 					position = { x = 0 y = 6 }
 					clipping = yes
 					verticalScrollbar = "right_vertical_slider"
@@ -659,7 +659,7 @@ guiTypes = {
 	}
 	containerWindowType = {
 		name = "fleet_manager_side_view"
-		size = { width = 376 height = 931 }
+		size = { width = 376 height = 810 }
 		show_position = { x = 1199 y = 9 }
 		hide_position = { x = -100% y = 0 }
 		animation_time = 200
