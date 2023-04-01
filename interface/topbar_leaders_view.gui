@@ -1,12 +1,12 @@
 @dynamic_extra = 0.8
 
+@leaders_view_width = 1962  # 1272
 @leaders_view_height = 829  # 640
-@leaders_list_height = 708 # 516
 
 guiTypes = {
 	containerWindowType = {
 		name = "topbar_leaders_view"
-		size = { width=1272 height=@leaders_view_height } 
+		size = { width=@leaders_view_width height=@leaders_view_height } 
 		dynamic_extra_height = @dynamic_extra
 		position = { x = -1270 y = 40 }
 		show_position = { x = 35 y = 40 }
@@ -59,9 +59,12 @@ guiTypes = {
 			pdx_tooltip = "CLOSE_TITLE"
 		}
 		
-		@role_icon_y = 75
-		@role_label_y = 80
-		@recruit_button_y = 70
+		@role_icon_y = 45  # 75
+		@role_label_y = 50  # 80
+		@recruit_button_y = 40  # 70
+		@leaders_list_height = 708 # 516
+		@leaders_list_width = 1940 # 1250
+		@leaders_list_y = 83 # 113
         
 		buttonType = {
 			name = "governor_icon"
@@ -198,9 +201,9 @@ guiTypes = {
         
 		containerWindowType = {
 			name = "leader_frame_box2"
-			size = { width = 1250 height = @leaders_list_height }
+			size = { width = @leaders_list_width height = @leaders_list_height }
 			dynamic_extra_height = @dynamic_extra
-			position = { x = 11 y = 113 }
+			position = { x = 11 y = @leaders_list_y }
         
 			background = {
 				name = "leader_frame2"
@@ -209,37 +212,43 @@ guiTypes = {
 			}
 		}
         
-		containerWindowType = {
-			name = "leader_frame_area_1"
-			size = { width = 313 height = @leaders_list_height }
-			dynamic_extra_height = @dynamic_extra
-			position = { x = 317 y = 113 }
+		# containerWindowType = {
+		# 	name = "leader_frame_area_1"
+		# 	size = { width = 313 height = @leaders_list_height }
+		# 	dynamic_extra_height = @dynamic_extra
+		# 	position = { x = 317 y = 113 }
         
-			background = {
-				name = "leader_frame2"
-				spriteType = "GFX_dark_area_cut"
-				alwaysTransparent = yes
-			}
-		}
+		# 	background = {
+		# 		name = "leader_frame2"
+		# 		spriteType = "GFX_dark_area_cut"
+		# 		alwaysTransparent = yes
+		# 	}
+		# }
         
-		containerWindowType = {
-			name = "leader_frame_area_2"
-			size = { width = 312 height = @leaders_list_height }
-			dynamic_extra_height = @dynamic_extra
-			position = { x = 949 y = 113 }
+		# containerWindowType = {
+		# 	name = "leader_frame_area_2"
+		# 	size = { width = 312 height = @leaders_list_height }
+		# 	dynamic_extra_height = @dynamic_extra
+		# 	position = { x = 949 y = 113 }
         
-			background = {
-				name = "leader_frame2"
-				spriteType = "GFX_dark_area_cut"
-				alwaysTransparent = yes
-			}
-		}
+		# 	background = {
+		# 		name = "leader_frame2"
+		# 		spriteType = "GFX_dark_area_cut"
+		# 		alwaysTransparent = yes
+		# 	}
+		# }
         
+		@lists_width = 483
+		@list_1_x = 10  # 10
+		@list_2_x = 490  # 319
+		@list_3_x = 970  # 630
+		@list_4_x = 1450  # 950
+
 		# Governors list
 		smoothListboxType = {
 			name ="governors_list"
-			position = { x = 10 y = 113 }
-			size = { x= 293 y = @leaders_list_height }
+			position = { x = @list_1_x y = 113 }
+			size = { x= @lists_width y = @leaders_list_height }
 			dynamic_extra_height = @dynamic_extra
 			scrollbartype = "standardlistbox_slider"
 			spacing = -4
@@ -248,8 +257,8 @@ guiTypes = {
 		# Scientists list
 		smoothListboxType = {
 			name ="scientists_list"
-			position = { x = 319 y = 113 }
-			size = { x= 293 y = @leaders_list_height }
+			position = { x = @list_2_x  y = 113 }
+			size = { x= @lists_width y = @leaders_list_height }
 			dynamic_extra_height = @dynamic_extra
 			scrollbartype = "standardlistbox_slider"
 			spacing = -4
@@ -258,8 +267,8 @@ guiTypes = {
 		# Admirals list
 		smoothListboxType = {
 			name ="admirals_list"
-			position = { x = 630 y = 113 }
-			size = { x= 293 y = @leaders_list_height }
+			position = { x = @list_3_x y = 113 }
+			size = { x= @lists_width y = @leaders_list_height }
 			dynamic_extra_height = @dynamic_extra
 			scrollbartype = "standardlistbox_slider"
 			spacing = -4
@@ -268,8 +277,8 @@ guiTypes = {
 		# Generals list
 		smoothListboxType = {
 			name ="generals_list"
-			position = { x = 950 y = 113 }
-			size = { x= 293 y = @leaders_list_height }
+			position = { x = @list_4_x y = 113 }
+			size = { x= @lists_width y = @leaders_list_height }
 			dynamic_extra_height = @dynamic_extra
 			scrollbartype = "standardlistbox_slider"
 			spacing = -4

@@ -286,77 +286,69 @@ guiTypes = {
 	# Leader entry
 	containerWindowType = {
 		name = "planet_list_leaders_entry"
-		size = { width = 298 height = 132 }
-
-
-		orientation = upper_left
-
+		size = { width = 475 height = 90 }
+		clipping = yes
 		background = {
 			name = "planet_list_leaders_entry_background"
-			quadTextureSprite = "GFX_tiles_frame_light"
+			quadTextureSprite = "GFX_start_screen_bg"
 			position = { x = 0 y = 0 }
 		}
-
 		containerWindowType = {
 			name = "selected"
 			position = { x = 0 y = 0 }
 			size = { width = 100% height = 100% }
-
 			background = {
 				name = "selected_bg"
 				spriteType = "GFX_glow_tile_orange"
 				alwaysTransparent = yes
 			}
 		}
-
 		buttonType = {
 			name = "leader_type_bg"
 			quadTextureSprite = "GFX_leader_bg_admiral"
-			position = { x = 12 y = 12 }
-			scale = 0.20
-			alwaystransparent = yes
+			position = { x = 5 y = 6 }
+			scale = 0.21
+			alwaysTransparent = yes
 		}
-
 		containerWindowType = {
 			name = "portrait"
-			position = { x = 12 y = 12 }
-			size = { width = 64 height = 76 }
+			position = { x = 5 y = 5 }
+			size = { width = 67 height = 80 }
 			clipping = yes
-
+			background = {
+				name = "portrait_background"
+				quadTextureSprite = "GFX_tiled_window_transparent"
+				alwaysTransparent = yes
+			}
 			iconType = {
 				name = "portrait"
 				spriteType = "GFX_portrait_character"
-				frame = 1
-				scale = 0.26
+				scale = 0.28
 				alwaysTransparent = yes
 				position = { x = -45 y = -12 }
 			}
 		}
-
-		containerWindowType = {
-			name = "leader_frame_box"
-			size = { width = 74 height = 86 }
-			position = { x = 7 y = 7 }
-
-			background = {
-				name = "leader_frame"
-				spriteType = "GFX_clean_frame_area"
-				alwaysTransparent = yes
-			}
-		}
-
+		#containerWindowType = {
+		#	name = "leader_frame_box"
+		#	size = { width = 84 height = 98 }
+		#	position = { x = 1 y = 1 }
+		#	background = {
+		#		name = "leader_frame"
+		#		spriteType = "GFX_clean_frame_area"
+		#		alwaysTransparent = yes
+		#	}
+		#}
 		instantTextBoxType = {
 			name = "leader_title"
-			font = "cg_16b"
+			font = "font_text_14"
 			text = "LEADER_TITLE"
 			position = { x = 83 y = 10 }
-			maxWidth = 120
-			maxHeight = 20
+			maxWidth = 170
+			maxHeight = 16
 			fixedSize = yes
 			format = left
 			alwaysTransparent = yes
 		}
-
 		buttonType = {
 			name = "rename_button"
 			quadTextureSprite = "gfx_transparency_button"
@@ -364,103 +356,113 @@ guiTypes = {
 			size = { x = 278 y = 18 }
 			oversound = no_sound
 		}
-
 		instantTextBoxType = {
 			name = "leader_name"
-			font = "cg_16b"
+			font = "font_text_14"
 			text = "LEADER_NAME"
 			position = { x = 83 y = 26 }
-			maxWidth = 130
-			maxHeight = 40
+			maxWidth = 232
+			maxHeight = 16
 			fixedSize = yes
 			format = left
 			alwaysTransparent = yes
 			text_color_code = "E"
 		}
-		
-		instantTextBoxType = {
-			name = "char_upkeep_label"
-			font = "cg_16b"
-			text = "UPKEEP"
-			position = { x = -113 y = 43 }
-			maxWidth = 74
-			maxHeight = 20
-			orientation = "UPPER_RIGHT"
-			format = right
-		}
-		
+		#instantTextBoxType = {
+		#	name = "char_upkeep_label"
+		#	font = "font_text_14"
+		#	text = "UPKEEP"
+		#	position = { x = -270 y = 28 }
+		#	maxWidth = 74
+		#	maxHeight = 16
+		#	orientation = upper_right
+		#	format = right
+		#}
 		instantTextBoxType = {
 			name = "leader_upkeep"
-			font = "cg_16b"
+			font = "font_text_14"
 			text = "-1"
-			position = { x = -62 y = 43 }
-			maxWidth = 50
-			maxHeight = 20
-			fixedSize = yes
-			format = right
-			orientation = "UPPER_RIGHT"
-			text_color_code = "H"
-		}
-
-		instantTextBoxType = {
-			name = "char_age_label"
-			font = "cg_16b"
-			text = "AGE"
-			position = { x = -115 y = 60 }
-			maxWidth = 74
-			maxHeight = 20
-			orientation = "UPPER_RIGHT"
-			format = right
-		}
-
-		instantTextBoxType = {
-			name = "leader_age"
-			font = "cg_16b"
-			text = "?"
-			position = { x = -62 y = 60 }
-			maxWidth = 50
-			maxHeight = 20
-			fixedSize = yes
-			format = right
-			orientation = "UPPER_RIGHT"
-			text_color_code = "H"
-		}
-
-		iconType = {
-			name ="leader_skill"
-			spriteType = "GFX_leader_skill"
-			position = { x= 83 y = 57 }
-		}
-
-		iconType = {
-			name = "experience"
-			spriteType = "GFX_queue_progressbar_200"
-			position = { x = 84 y = 78 }
-		}
-
-		OverlappingElementsBoxType = {
-			name = "traits"
-			position = { x = 35 y = 93 }
-			size = { x=250 y= 16 }
-			format = right
-		}
-
-		instantTextBoxType = {
-			name = "leader_status"
-			font = "cg_16b"
-			text = "STATUS"
-			position = { x = 13 y = 92 }
-			maxWidth = 140
-			maxHeight = 40
+			position = { x = -196 y = 28 }
+			maxWidth = 60
+			maxHeight = 16
 			fixedSize = yes
 			format = left
+			orientation = upper_right
+			text_color_code = "H"
 		}
-
+		instantTextBoxType = {
+			name = "char_age_label"
+			font = "font_text_14"
+			text = "AGE"
+			appendText = ":"
+			position = { x = -146 y = 28 }
+			maxWidth = 60
+			maxHeight = 16
+			orientation = upper_right
+			format = right
+		}
+		instantTextBoxType = {
+			name = "leader_age"
+			font = "font_text_14"
+			text = "?"
+			position = { x = -85 y = 28 }
+			maxWidth = 38
+			maxHeight = 16
+			fixedSize = yes
+			format = left
+			orientation = upper_right
+			text_color_code = "H"
+		}
+		iconType = {
+			name = "experience"
+			spriteType = "GFX_ui_progressbar_thick"
+			position = { x = -200 y = 6 }
+			orientation = upper_right
+		}
+		iconType = {
+			name = "leader_skill"
+			spriteType = "GFX_leader_skill"
+			position = { x = -226 y = 7 }
+			orientation = upper_right
+		}
+		# traits black background
+		containerWindowType = {
+			name = "traits_background"
+			position = { x = 257 y = 47 }
+			size = { width = 210 height = 35 }
+			background = {
+				name = "traits_background"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+			}
+		}
+		overlappingElementsBoxType = {
+			name = "traits"
+			position = { x = 264 y = 50 }
+			size = { x = 200 y = 30 }
+			format = right
+		}
+		instantTextBoxType = {
+			name = "leader_status"
+			font = "font_text_14"
+			text = "STATUS"
+			position = { x = 83 y = 47 }
+			maxWidth = 173
+			maxHeight = 34
+			format = left
+			vertical_alignment = top
+		}
+		iconType = {
+			name = "dismiss_icon"
+			spriteType = "GFX_unemployed"
+			position = { x = -40 y = 10 }
+			orientation = upper_right
+			alwaysTransparent = yes
+		}
 		buttonType = {
 			name = "dismiss"
-			quadTextureSprite = "GFX_close_button_planet"
-			position = { x= -45 y = 7  }
-			orientation = "UPPER_RIGHT"
+			quadTextureSprite = "GFX_button_29_animated"
+			position = { x = -51 y = -2 }
+			orientation = upper_right
 		}
 	}
 

@@ -460,7 +460,7 @@ guiTypes = {
 
 			gridBoxType = {
 				name = "planet_status_list"
-				slotSize = { width = 18 height = 15 }
+				slotSize = { width = 20 height = 15 }
 				max_slots_horizontal = 5
 				max_slots_vertical = 1
 				format = "UPPER_RIGHT"

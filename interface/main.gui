@@ -333,7 +333,7 @@ guiTypes = {
 			}
 			containerWindowType = { name = "tb_alloys_group"
 				size = { width = 95 height = @resource_height }
-				position = { x = @resource_1_3_pos_x  y = @resource_top_pos_y }
+				position = { x = @resource_1_1_pos_x  y = @resource_bottom_pos_y }
 				
 				background = {
 					name = "background"
@@ -342,7 +342,7 @@ guiTypes = {
 				iconType = {
 					name = "icon"
 					spriteType = "GFX_resource_alloys"
-					position = { x = 0 y = -1 }
+					position = { x = 1 y = 0 }
 					tooltip_mode_enabled = yes
 					alwaysTransparent = yes
 				}
@@ -360,7 +360,7 @@ guiTypes = {
 			}
 			containerWindowType = { name = "tb_food_group"
 				size = { width = 95 height = @resource_height }
-				position = { x = @resource_1_1_pos_x  y = @resource_bottom_pos_y }
+				position = { x = @resource_1_3_pos_x  y = @resource_top_pos_y }
 				
 				background = {
 					name = "background"
@@ -369,7 +369,7 @@ guiTypes = {
 				iconType = {
 					name = "icon"
 					spriteType = "GFX_resource_food"
-					position = { x = 1 y = 0 }
+					position = { x = 0 y = -1 }
 					tooltip_mode_enabled = yes
 					alwaysTransparent = yes
 				}
